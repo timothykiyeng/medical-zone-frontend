@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="navbar justify-between items-center " >
                     <div className='flex items-center md:justify-around justify-between'>
                         <Link to='/' className='md:text-3xl text-2xl uppercase font-semibold '>
-                            Doctor's Appointment
+                            Medibook
                         </Link>
                         
                         <ul className="md:flex items-center md:text-lg font-medium hidden">
