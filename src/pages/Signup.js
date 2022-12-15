@@ -18,3 +18,18 @@ function SignUp({ setUser }) {
     console.log(e.target.name);
     setUserData({ ...user, [e.target.name]: e.target.value });
   }
+
+   // Vallidate the user inputs and check if any are emptty
+   function validateUserInput(e) {
+    if (
+      user.name === "" ||
+      user.email === "" ||
+      user.phone === "" ||
+      user.password === "" ||
+      user.password_confirmation === ""
+    ) {
+      alert("All fields are required");
+    } else {
+      createUser(e);
+    }
+  }
