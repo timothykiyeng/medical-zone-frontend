@@ -12,3 +12,12 @@ function Login({ setUser }) {
     console.log(e.target.name);
     setUserData({ ...user, [e.target.name]: e.target.value });
   }
+
+  // Validates if all fields are filled
+  function validateUser(e) {
+    e.preventDefault();
+    if (user.email === "" || user.password === "") {
+      alert("All fields are required");
+    } else {
+      AuthenticateUser(e);
+    }
