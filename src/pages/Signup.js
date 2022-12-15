@@ -81,3 +81,10 @@ function SignUp({ setUser }) {
           onChange={handleChanges}
         />
         <br />
+        <input
+          name="phone"
+          type={"number"}
+          placeholder="Phone"
+          value={user.phone}
+          onChange={handleChanges}
+        />
