@@ -6,3 +6,9 @@ function Login({ setUser }) {
     const [user, setUserData] = useState({ email: "", password: "" });
     // eslint-disable-next-line
     const [errors, setErrors] = useState([]);
+
+    // Keep track of the changes made to the form
+  function handleChanges(e) {
+    console.log(e.target.name);
+    setUserData({ ...user, [e.target.name]: e.target.value });
+  }
