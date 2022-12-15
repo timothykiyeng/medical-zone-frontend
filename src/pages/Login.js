@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 function Login({ setUser }) {
-    const navigate = useNavigate();
-    const [user, setUserData] = useState({ email: "", password: "" });
-    // eslint-disable-next-line
-    const [errors, setErrors] = useState([]);
+  const navigate = useNavigate();
+  const [user, setUserData] = useState({ email: "", password: "" });
+  // eslint-disable-next-line
+  const [errors, setErrors] = useState([]);
 
-    // Keep track of the changes made to the form
+  // Keep track of the changes made to the form
   function handleChanges(e) {
     console.log(e.target.name);
     setUserData({ ...user, [e.target.name]: e.target.value });
@@ -21,7 +21,8 @@ function Login({ setUser }) {
     } else {
       AuthenticateUser(e);
     }
-    // Check if user exists in the database and authenticate
+  }
+  // Check if user exists in the database and authenticate
   function AuthenticateUser(e) {
     e.preventDefault();
     fetch("/login", {
@@ -39,7 +40,7 @@ function Login({ setUser }) {
       }
     });
   }
-   
+
   // handle login
   function loginUser(userData) {
     setUser(userData);
@@ -69,3 +70,18 @@ function Login({ setUser }) {
         />
         <br />
         <input type={"submit"} value="Sign In" />
+
+        <p>
+          Not yet registered?{" "}
+          <span>
+            <NavLink to={"/signup"} className="sign">
+              Sign Up
+            </NavLink>
+          </span>{" "}
+          to get started!{" "}
+        </p>
+      </form>
+    </div>
+  );
+}
+export default Login;
