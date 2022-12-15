@@ -52,3 +52,9 @@ function SignUp({ setUser }) {
             : navigate("/dashboard");
           alert("Created account successfully");
         });
+    } else {
+        alert("Failed to create account");
+        response.json().then((error) => setErrors(error.errors));
+      }
+    });
+  }
