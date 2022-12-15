@@ -94,3 +94,11 @@ function SignUp({ setUser }) {
           <option value="patient">Patient</option>
         </select>
         <br />
+        <input
+          name="password"
+          type={"password"}
+          placeholder="Password"
+          value={user.password}
+          onChange={handleChanges}
+          autoComplete="on"
+        />
