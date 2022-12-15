@@ -2,25 +2,25 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 function SignUp({ setUser }) {
-    const navigate = useNavigate();
-    const [errors, setErrors] = useState([]);
-    const [user, setUserData] = useState({
-      name: "",
-      email: "",
-      password: "",
-      password_confirmation: "",
-      phone: "",
-      category: "doctor",
-    });
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState([]);
+  const [user, setUserData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
+    phone: "",
+    category: "doctor",
+  });
 
-     // Keep track of the changes made to the form
+  // Keep track of the changes made to the form
   function handleChanges(e) {
     console.log(e.target.name);
     setUserData({ ...user, [e.target.name]: e.target.value });
   }
 
-   // Vallidate the user inputs and check if any are emptty
-   function validateUserInput(e) {
+  // Vallidate the user inputs and check if any are emptty
+  function validateUserInput(e) {
     if (
       user.name === "" ||
       user.email === "" ||
@@ -52,7 +52,7 @@ function SignUp({ setUser }) {
             : navigate("/dashboard");
           alert("Created account successfully");
         });
-    } else {
+      } else {
         alert("Failed to create account");
         response.json().then((error) => setErrors(error.errors));
       }
@@ -88,7 +88,7 @@ function SignUp({ setUser }) {
           value={user.phone}
           onChange={handleChanges}
         />
-         <br />
+        <br />
         <select name="category" value={user.category} onChange={handleChanges}>
           <option value="doctor">Doctor</option>
           <option value="patient">Patient</option>
@@ -110,3 +110,19 @@ function SignUp({ setUser }) {
           value={user.password_confirmation}
           onChange={handleChanges}
         />
+        <br />
+        <input type={"submit"} id="submit" value="Create Account" />
+        <p>
+          Already have an account?{" "}
+          <span>
+            <NavLink to={"/login"} className="sign">
+              Sign In
+            </NavLink>
+          </span>
+          !
+        </p>
+      </form>
+    </div>
+  );
+}
+export default SignUp;
