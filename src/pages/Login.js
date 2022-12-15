@@ -21,3 +21,21 @@ function Login({ setUser }) {
     } else {
       AuthenticateUser(e);
     }
+    // Check if user exists in the database and authenticate
+  function AuthenticateUser(e) {
+    e.preventDefault();
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then((response) => {
+      if (response.ok) {
+        response.json().then((userData) => loginUser(userData));
+      } else {
+        alert("Failed to login");
+        response.json().then((error) => setErrors(error.errors));
+      }
+    });
+  }
