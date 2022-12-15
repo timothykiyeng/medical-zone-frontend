@@ -102,3 +102,11 @@ function SignUp({ setUser }) {
           onChange={handleChanges}
           autoComplete="on"
         />
+        <br />
+        <input
+          name="password_confirmation"
+          type={"password"}
+          placeholder="Password Confirmation"
+          value={user.password_confirmation}
+          onChange={handleChanges}
+        />
