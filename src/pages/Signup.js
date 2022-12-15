@@ -33,3 +33,12 @@ function SignUp({ setUser }) {
       createUser(e);
     }
   }
+
+  //add a new user to the database
+  function createUser(event) {
+    event.preventDefault();
+    fetch("/users/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
