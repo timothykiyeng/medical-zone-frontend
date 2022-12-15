@@ -58,3 +58,26 @@ function SignUp({ setUser }) {
       }
     });
   }
+  return (
+    <div className="signUpForm">
+      <form onSubmit={validateUserInput}>
+        <h2>
+          Fill in the details <br />
+          to create your account
+        </h2>
+        <input
+          name="name"
+          type={"text"}
+          placeholder="Full Name"
+          value={user.name}
+          onChange={handleChanges}
+        />{" "}
+        <br />
+        <input
+          name="email"
+          type={"email"}
+          placeholder="Email"
+          value={user.email}
+          onChange={handleChanges}
+        />
+        <br />
