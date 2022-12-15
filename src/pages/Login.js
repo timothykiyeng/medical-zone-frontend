@@ -39,3 +39,10 @@ function Login({ setUser }) {
       }
     });
   }
+   
+  // handle login
+  function loginUser(userData) {
+    setUser(userData);
+    userData.category === "doctor" ? navigate("/") : navigate("/dashboard");
+    alert("logging in...");
+  }
