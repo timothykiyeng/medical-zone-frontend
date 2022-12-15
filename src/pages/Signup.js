@@ -42,3 +42,13 @@ function SignUp({ setUser }) {
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(user),
+    }).then((response) => {
+      if (response.ok) {
+        response.json().then((userData) => {
+          setUser(userData);
+          userData.category === "doctor"
+            ? navigate("/")
+            : navigate("/dashboard");
+          alert("Created account successfully");
+        });
