@@ -88,3 +88,9 @@ function SignUp({ setUser }) {
           value={user.phone}
           onChange={handleChanges}
         />
+         <br />
+        <select name="category" value={user.category} onChange={handleChanges}>
+          <option value="doctor">Doctor</option>
+          <option value="patient">Patient</option>
+        </select>
+        <br />
