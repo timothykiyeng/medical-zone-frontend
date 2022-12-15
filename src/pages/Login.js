@@ -46,3 +46,26 @@ function Login({ setUser }) {
     userData.category === "doctor" ? navigate("/") : navigate("/dashboard");
     alert("logging in...");
   }
+
+  return (
+    <div className="signUpForm">
+      <form className="loginForm" onSubmit={validateUser}>
+        <h2>Welcome back!</h2>
+        <input
+          type={"email"}
+          placeholder="Email"
+          name="email"
+          onChange={handleChanges}
+          value={user.email}
+        />
+        <br />
+        <input
+          type={"password"}
+          placeholder="Password"
+          name="password"
+          autoComplete="on"
+          onChange={handleChanges}
+          value={user.password}
+        />
+        <br />
+        <input type={"submit"} value="Sign In" />
