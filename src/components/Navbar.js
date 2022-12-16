@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import { FaBars } from "react-icons/fa"
-import { FaRegUserCircle } from "react-icons/fa";
+import { FaUserMd, FaUser, FaBars } from "react-icons/fa";
+
 
 const Navbar = () => {
     const menuRef = useRef()
@@ -31,9 +31,15 @@ const Navbar = () => {
                             </li>
                             <li className='md:mx-8 md:my-0 my-2'>
                                 <Link to='/signup'>
-                                    <FaRegUserCircle className="md:text-4xl text-3xl text-pink-500" />
+                                    <FaUser className="md:text-4xl text-3xl text-gray-100" />
                                 </Link>
                             </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/signup'>
+                                    <FaUserMd className="md:text-4xl text-3xl text-pink-500" />
+                                </Link>
+                            </li>
+                            
                         </ul>
 
                         <button onClick={showMenu} className="md:hidden">
@@ -54,7 +60,12 @@ const Navbar = () => {
                             </li>
                             <li className='md:mx-8 md:my-0 my-2'>
                                 <Link to='/signup'>
-                                    <FaRegUserCircle className="md:text-4xl text-3xl text-pink-500" />
+                                    <FaUser className="md:text-4xl text-3xl text-gray-100" />
+                                </Link>
+                            </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/signup'>
+                                    <FaUserMd className="md:text-4xl text-3xl text-pink-500" />
                                 </Link>
                             </li>
                         </ul>
