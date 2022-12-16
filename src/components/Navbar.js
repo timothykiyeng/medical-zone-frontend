@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import { FaBars } from "react-icons/fa"
+import { FaUserMd, FaUser, FaBars } from "react-icons/fa";
+
 
 const Navbar = () => {
     const menuRef = useRef()
@@ -14,24 +15,31 @@ const Navbar = () => {
             <nav className='md:py-6 py-4'>
                 <div className="navbar justify-between items-center " >
                     <div className='flex items-center md:justify-around justify-between'>
-                        <Link to='/' className='md:text-3xl text-2xl uppercase font-semibold '>
-                            Medibook
+                        <Link to='/' className='md:text-3xl text-xl uppercase font-semibold text-gray-100'>
+                            MediHeal Hospital
                         </Link>
                         
-                        <ul className="md:flex items-center md:text-lg font-medium hidden">
-                            <li className='md:mx-8 md:my-0 my-2'>
-                                <Link to='/'>Home</Link>
-                            </li>
+                        <ul className="md:flex items-center md:text-lg font-medium uppercase hidden">
                             <li className='md:mx-8 md:my-0 my-2'>
                                 <Link to='/about'>About</Link>
                             </li>
                             <li className='md:mx-8 md:my-0 my-2'>
-                                <Link 
-                                    to='/contact' 
-                                    className="border-2 bg-gray-800 px-4 py-1 hover:bg-gray-600 duration-500 text-white rounded-md">
-                                        Contact
+                                <Link to='/services'>Services</Link>
+                            </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/contact'>Contact</Link>
+                            </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/signup'>
+                                    <FaUser className="md:text-4xl text-3xl text-gray-100" />
                                 </Link>
                             </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/signup'>
+                                    <FaUserMd className="md:text-4xl text-3xl text-pink-500" />
+                                </Link>
+                            </li>
+                            
                         </ul>
 
                         <button onClick={showMenu} className="md:hidden">
@@ -42,16 +50,22 @@ const Navbar = () => {
                     <div ref={menuRef} className="md:hidden block">
                         <ul className="md:text-lg font-medium">
                             <li className='md:mx-8 md:my-0 my-2'>
-                                <Link to='/'>Home</Link>
-                            </li>
-                            <li className='md:mx-8 md:my-0 my-2'>
                                 <Link to='/about'>About</Link>
                             </li>
                             <li className='md:mx-8 md:my-0 my-2'>
-                                <Link 
-                                    to='/contact' 
-                                    className="border-2 bg-gray-800 px-4 py-1 hover:bg-gray-600 duration-500 text-white rounded-md">
-                                        Contact
+                                <Link to='/services'>Services</Link>
+                            </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/contact'>Contact</Link>
+                            </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/signup'>
+                                    <FaUser className="md:text-4xl text-3xl text-gray-100" />
+                                </Link>
+                            </li>
+                            <li className='md:mx-8 md:my-0 my-2'>
+                                <Link to='/signup'>
+                                    <FaUserMd className="md:text-4xl text-3xl text-pink-500" />
                                 </Link>
                             </li>
                         </ul>
