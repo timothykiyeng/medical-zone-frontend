@@ -9,6 +9,7 @@ const Footer = () => {
                 <div className="md:flex md:justify-around justify-center items-center  text-center md:text-base text-sm">
                     <div>
                         <h1>Medibook</h1>
+                        {/* <p></p> */}
                     </div>
 
                     <div className="md:my-0 my-2">
