@@ -28,7 +28,7 @@ const Navbar = () => {
                             </li>
                             <li className='md:mx-8 md:my-0 md:py-0 py-3'>
                                 <Link to='/login' className="py-2 px-4 rounded-lg bg-white">
-                                    Signup
+                                    Login
                                 </Link>
                             </li>
                             <li className='md:mx-8 md:my-0 md:py-0 py-3'>
@@ -54,7 +54,7 @@ const Navbar = () => {
                             </li>
                             <li className='md:mx-8 md:my-0 md:py-0 py-3'>
                                 <Link to='/login' className="py-2 px-4 rounded-lg bg-white">
-                                    Signup
+                                    Login
                                 </Link>
                             </li>
                             <li className='md:mx-8 md:my-0 md:py-0 py-3'>
