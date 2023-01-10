@@ -8,13 +8,13 @@ const Footer = () => {
             <footer className="bg-pink-400 md:py-12 py-6">
                 <div className="md:flex md:justify-around justify-center items-center  text-center md:text-base text-sm">
                     <div>
-                        <h1>Medibook</h1>
+                        <h1>Medical Zone</h1>
                     </div>
 
                     <div className="md:my-0 my-2">
                         <p>Copyright &copy; 2022 |  
                             <Link to='/'> 
-                               | Medibook
+                               | Medical Zone
                             </Link>
                         </p>
                     </div>

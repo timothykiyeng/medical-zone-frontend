@@ -16,7 +16,7 @@ const Navbar = () => {
                 <div className="navbar justify-between items-center " >
                     <div className='flex items-center md:justify-around justify-between'>
                         <Link to='/' className='md:text-3xl text-xl uppercase font-semibold text-white'>
-                            MediHeal Hospital
+                            Medical Zone
                         </Link>
                         
                         <ul className="md:flex items-center md:text-lg font-medium uppercase hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
                             </li>
                             <li className='md:mx-8 md:my-0 md:py-0 py-3'>
                                 <Link to='/login' className="py-2 px-4 rounded-lg bg-white">
-                                    Signup
+                                    Login
                                 </Link>
                             </li>
                             <li className='md:mx-8 md:my-0 md:py-0 py-3'>
@@ -42,27 +42,6 @@ const Navbar = () => {
                         <button onClick={showMenu} className="md:hidden">
                             <FaBars />
                         </button>
-                    </div>
-
-                    <div ref={menuRef} className="md:hidden block">
-                        <ul className="md:text-lg font-medium">
-                            <li className='md:mx-8 md:my-0 my-2'>
-                                <Link to='/about'>About</Link>
-                            </li>
-                            <li className='md:mx-8 md:my-0 my-2'>
-                                <Link to='/contact'>Contact</Link>
-                            </li>
-                            <li className='md:mx-8 md:my-0 md:py-0 py-3'>
-                                <Link to='/login' className="py-2 px-4 rounded-lg bg-white">
-                                    Signup
-                                </Link>
-                            </li>
-                            <li className='md:mx-8 md:my-0 md:py-0 py-3'>
-                                <Link to='/signup' className="py-2 px-4 rounded-lg bg-pink-500 text-white">
-                                    Signup
-                                </Link>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </nav>
