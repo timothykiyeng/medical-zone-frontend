@@ -9,7 +9,7 @@ import { FaCalendarAlt } from 'react-icons/fa'
 const Sidebar = () => {
     return ( 
         <>
-            <div>
+            <div className='flex flex-col justify-center'>
                 <h1>Medical Zone</h1>
                 <span>
                     <FaUserCircle />
