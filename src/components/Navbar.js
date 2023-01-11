@@ -26,22 +26,22 @@ const Navbar = () => {
                     </div>
                     
                     <div className={`${open ? "block" : "hidden"} md:flex`}>
-                        <ul className="md:flex items-center md:text-lg font-medium uppercase">
+                        <ul className="md:flex items-center md:text-lg text-base uppercase">
                             {navlinks.map((navlink) => (
-                                <li className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
+                                <li key={navlink.path} className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
                                     <Link to={navlink.path}>{navlink.name}</Link>
                                 </li>
                             ))}
                             <li className='md:mx-8 md:my-0 my-4'>
                                 <Link 
-                                    className="bg-pink-100 px-4 py-2 hover:bg-pink-500 hover:text-white duration-500 rounded-md" 
+                                    className="bg-white px-4 py-2 hover:bg-pink-500 hover:text-white duration-500 rounded-md" 
                                     to='/login'>
                                         Login
                                     </Link>
                             </li>
                             <li className='md:mx-8 md:my-0 my-4'>
                                 <Link 
-                                    className="text-white bg-pink-500 px-4 py-2 hover:text-pink-500 hover:bg-white duration-500 rounded-md" 
+                                    className="btn hover:text-pink-500 hover:bg-white" 
                                     to='/signup'>
                                         Signup
                                 </Link>
