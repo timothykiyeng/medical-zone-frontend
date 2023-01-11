@@ -127,4 +127,16 @@ const Login = ({ setUser }) => {
           <form className="input-group" onSubmit={handleLoginSubmit}>
             <label className="input-label">  {docLogin ? "Employee " : "Patient "}Email:
             </label>
+            <input
+              className="input"
+              type="text"
+              name="email"
+              id="email"
+              onChange={handleChange}
+              value={loginData.email}
+            ></input>
+            <br></br>
+            <br></br>
+            <br></br>
+            
           
