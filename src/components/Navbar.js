@@ -26,7 +26,7 @@ const Navbar = () => {
                     </div>
                     
                     <div className={`${open ? "block" : "hidden"} md:flex`}>
-                        <ul className="md:flex items-center md:text-lg font-medium uppercase">
+                        <ul className="md:flex items-center md:text-lg text-base uppercase">
                             {navlinks.map((navlink) => (
                                 <li key={navlink.path} className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
                                     <Link to={navlink.path}>{navlink.name}</Link>
