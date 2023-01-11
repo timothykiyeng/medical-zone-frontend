@@ -3,6 +3,7 @@ const BookAppointment = () => {
         e.preventDefault();
         console.log('submitted successfully')
     }
+    
     return ( 
         <>
             <div className="md:mx-64 mx-8">
