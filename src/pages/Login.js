@@ -59,3 +59,22 @@ const Login = ({ setUser }) => {
     if (confirmPassword !== signupData.password) {
       alert("Passwords dont' match!");
     }
+    fetch("http://127.0.0.1:3000/patients", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(signupData),
+    }).then((r) => {
+      if (r.ok) {
+        r.json()
+          .then((user) => {
+            setUser(user);
+          })
+          .then(() => navigate("/"));
+      } else {
+        r.json().then((json) => setErrors(json.errors));
+      }
+    });
+  };
