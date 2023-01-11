@@ -20,3 +20,8 @@ const Login = ({ setUser }) => {
     age: "",
     doc: false,
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData((loginData) => ({ ...loginData, [name]: value }));
+  };
