@@ -29,3 +29,26 @@ const Login = ({ setUser }) => {
     const { name, value } = e.target;
     setSignupData((signupData) => ({ ...signupData, [name]: value }));
   };
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    setError([]);
+    fetch(docLogin ? "http://127.0.0.1:3000/doclogin" : "http://127.0.0.1:3000/patientlogin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(loginData),
+    }).then((r) => {
+      if (r.ok) {
+        r.json()
+          .then((user) => {
+            setUser(user);
+          })
+          .then(() => navigate("/"));
+      } else {
+        r.json().then((json) => setError(json.error));
+      }
+    });
+  };
