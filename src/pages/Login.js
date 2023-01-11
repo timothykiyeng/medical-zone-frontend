@@ -78,3 +78,10 @@ const Login = ({ setUser }) => {
       }
     });
   };
+
+  const handleDocClick = () => {
+    setDocLogin(true);
+    setPatLogin(false);
+    setLoginData({ email: "", password: "" });
+    setError([]);
+  };
