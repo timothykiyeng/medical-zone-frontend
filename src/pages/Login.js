@@ -25,3 +25,7 @@ const Login = ({ setUser }) => {
     const { name, value } = e.target;
     setLoginData((loginData) => ({ ...loginData, [name]: value }));
   };
+  const handleSignUpChange = (e) => {
+    const { name, value } = e.target;
+    setSignupData((signupData) => ({ ...signupData, [name]: value }));
+  };
