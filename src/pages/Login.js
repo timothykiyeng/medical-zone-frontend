@@ -85,3 +85,10 @@ const Login = ({ setUser }) => {
     setLoginData({ email: "", password: "" });
     setError([]);
   };
+
+  const handlePatClick = () => {
+    setDocLogin(false);
+    setPatLogin(true);
+    setLoginData({ email: "", password: "" });
+    setError([]);
+  };
