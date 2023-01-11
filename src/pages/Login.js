@@ -52,3 +52,10 @@ const Login = ({ setUser }) => {
       }
     });
   };
+
+  const handleSignUpSubmit = (e) => {
+    e.preventDefault();
+    setErrors([]);
+    if (confirmPassword !== signupData.password) {
+      alert("Passwords dont' match!");
+    }
