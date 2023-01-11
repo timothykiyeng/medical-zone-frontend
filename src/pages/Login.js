@@ -99,3 +99,32 @@ const Login = ({ setUser }) => {
     setPatLogin(false);
     setLoginData({ name: "", email: "", password: "", birthdate: "" });
     setErrors([]);
+  }
+  return (
+    <div className="login">
+      <figure className="login-form-box">
+        <div className="selector">
+          <button
+            className={docLogin ? "active" : null}
+            onClick={handleDocClick}
+          >
+            Doctor
+          </button>
+          <button
+            className={patLogin ? "active" : null}
+            onClick={handlePatClick}
+          >
+            Patient
+          </button>
+          <button
+            className={docLogin || patLogin ? null : "active"}
+            onClick={handleSignupClick}
+          >
+            SignUp{" "}
+          </button>
+        </div>
+        {docLogin || patLogin ? (
+          <form className="input-group" onSubmit={handleLoginSubmit}>
+            <label className="input-label">  {docLogin ? "Employee " : "Patient "}Email:
+            </label>
+          
