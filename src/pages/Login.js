@@ -92,3 +92,10 @@ const Login = ({ setUser }) => {
     setLoginData({ email: "", password: "" });
     setError([]);
   };
+
+  
+  const handleSignupClick = () => {
+    setDocLogin(false);
+    setPatLogin(false);
+    setLoginData({ name: "", email: "", password: "", birthdate: "" });
+    setErrors([]);
