@@ -1,4 +1,4 @@
-const Summary = () => {
+const Patient = () => {
     return ( 
         <>
             Summary
@@ -6,4 +6,4 @@ const Summary = () => {
      );
 }
  
-export default Summary;
+export default Patient;

@@ -56,7 +56,7 @@ const appointments = [
 
 
 
-const Appointments = () => {
+const BookAppointments = () => {
     const [newAppointment, setNewAppointment] = useState({title: "", name: "", start: "", end: ""})
     const [allAppointments, setAllAppointments] = useState(appointments)
 
@@ -92,7 +92,6 @@ const Appointments = () => {
                             <DatePicker
                                 className="datepicker" 
                                 placeholderText="Start Date" 
-                                style={{ marginRight: "10px" }} 
                                 selected={newAppointment.start} 
                                 onChange={(start) => setNewAppointment({ ...newAppointment, start })} 
                             />
@@ -105,7 +104,6 @@ const Appointments = () => {
                         </div>
                         <button 
                             className="btn md:mt-8 mt-4 w-full"
-                            stlye={{ marginTop: "10px" }} 
                             onClick={handleAddAppointment}
                         >
                             Add Appointment
@@ -124,4 +122,4 @@ const Appointments = () => {
      );
 }
  
-export default Appointments;
+export default BookAppointments;

@@ -1,16 +1,17 @@
-import Button from "../components/Button";
+import { useRef } from "react";
 
 const Doctor = () => {
+    const { id } = useRef()
     return ( 
         <>
             <div className="">
                 <div className="md:flex ">
-                    <Link to='/patients'>
+                    <Link to={`/doctor/${id}`}>
                         Patients
                     </Link>
-                    <Button>
+                    <Link to={`/doctor/${id}`}>
                         Book Appointment
-                    </Button>
+                    </Link>
                 </div>
 
                 {/* list of all patients */}
