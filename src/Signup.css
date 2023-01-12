@@ -8,3 +8,8 @@
   color: #ff69b4;
   margin-bottom: 20px;
 }
+.signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
