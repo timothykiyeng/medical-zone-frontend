@@ -1,4 +1,5 @@
 import HeroBanner from '../assets/hero.jpg'
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return ( 
@@ -17,6 +18,14 @@ const Hero = () => {
                     </h2>
                     <h1 className='mb-4 md:text-5xl text-3xl font-bold uppercase text-sky-600 md:mt-8 mt-4 text-center'>We Offer Quality Treatment But Only God Heals</h1>
                     <p className='text-center md:text-lg text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <div className='md:flex justify-center items-center md:pt-16 pt-8'>
+                        <button className='btn bg-white text-black uppercase font-medium md:mx-8 mx-4'>
+                            Get Started
+                        </button>
+                        <Link to='/login' className='btn uppercase font-medium md:mx-8 mx-4'>
+                            Book Now
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>

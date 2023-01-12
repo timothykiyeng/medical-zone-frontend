@@ -7,7 +7,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Calendar from './pages/Calendar';
 import Doctor from './pages/Doctor';
 import BookAppointments from './components/doctors/BookAppointments';
 import PatientList from './components/doctors/PatientList';

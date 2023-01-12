@@ -13,8 +13,11 @@ const Footer = () => {
 
                     <div className="md:my-0 my-2">
                         <p>Copyright &copy; 2022 |  
-                            <Link to='/'> 
-                               | Medical Zone
+                            <Link 
+                                to='/'
+                                className="text-white md:mll-2 ml-1"
+                                > 
+                               Medical Zone
                             </Link>
                         </p>
                     </div>
