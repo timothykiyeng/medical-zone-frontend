@@ -19,3 +19,11 @@
   border-radius: 5px;
   border: none;
 }
+.signup button[type="submit"] {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
