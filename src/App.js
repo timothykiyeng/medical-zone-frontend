@@ -7,8 +7,10 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import BookAppointment from './pages/doctor/BookAppointment';
-import Appointment from './pages/doctor/Appointment';
+import Doctor from './pages/Doctor';
+import BookAppointments from './components/doctors/BookAppointments';
+import PatientList from './components/doctors/PatientList';
+import Patient from './pages/patients/Patient';
 
 
 function App() {
@@ -22,8 +24,10 @@ function App() {
           <Route path='/contact' element={ <Contact /> }/>
           <Route path='/login' element={ <Login /> }/>
           <Route path='/signup' element={ <Signup /> }/>
-          <Route path='/appointments' element={<Appointment />} />
-          <Route path='/bookappointment' element={<BookAppointment />} />
+          <Route path='/doctor' element={<Doctor />} />
+          <Route path='/doctor/:id' element={ <BookAppointments /> }/>
+          <Route path='/doctor/:id' element={ <PatientList />} />
+          <Route path='/patient' element={<Patient /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
