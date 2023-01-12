@@ -26,3 +26,27 @@
   border: none;
   margin-top: 20px;
 }
+.login .selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.login .selector button {
+  background-color: #00bfff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.login .selector button.active {
+  background-color: #ff69b4;
+}
+
+.login p {
+  color: red;
+  margin-top: 20px;
+}
