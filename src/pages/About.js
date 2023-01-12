@@ -1,5 +1,10 @@
 import AboutBanner from '../assets/about.jpg'
 import "./About.css" 
+import {SlEmotsmile} from "react-icons/sl"
+import {GiProgression} from "react-icons/gi"
+import {BsHeart} from "react-icons/bs"
+import {HiOutlineUserGroup} from "react-icons/hi"
+import { IconContext } from 'react-icons'
 
 const About = () => {
     return ( 
@@ -22,22 +27,18 @@ const About = () => {
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center lg:my-24 md:my-16 my-6 md:mx-0 mx-4">
-                    <h2 className="font-medium md:text-lg text-base text-white">
+                    <h2 className="font-medium md:text-lg text-base text-pink-500">Our Values</h2>
+                    <h2 className='md:text-1xl font-medium text-2xl text-black text-center'>We're an ambitious and smart team with a shared mission</h2>
 
-                        <span className="text-pink-500 mx-2">Our Values</span>
-                    </h2>
-                    <h1 className='md:text-1xl font-medium text-2xl text-black md:mt-8 mt-4 text-center'>We're an ambitious and smart team with a shared mission</h1>
-
-                    <div className="flex flex-col justify-center items-left left lg:my-24 md:my-16 my-6 md:mx-0 mx-4">
-                    <h2 className="font-medium md:text-lg text-base text-white text-align: left">
-
-                    <span className="text-black mx-2">Our team</span>
-                    </h2>
                 </div>
-                </div>
-              
-
-
+                <div className='flex truncate justify-center space-x-8 text-base font-semibold' >
+                    <IconContext.Provider value={{size:'4rem' ,color: 'gb(236 72 153)' }} >
+                    <h1><SlEmotsmile size='4rem' color='rgb(236 72 153)'/>Customer Happiness</h1>
+                    <h1><GiProgression size='4rem' color='rgb(236 72 153)'/>Customer Progress</h1>
+                    <h1><BsHeart size='4rem' color='rgb(236 72 153)'/>Customer Welfare</h1>
+                    <h1><HiOutlineUserGroup size='4rem' color='rgb(236 72 153)'/>Customer Progress</h1>
+                    </IconContext.Provider>
+                    </div>
             </div>
         </>
      );
