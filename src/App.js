@@ -9,7 +9,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Doctor from './pages/Doctor';
 import Patient from './pages/Patient';
-import Calendar from './pages/Calendar';
 
 
 function App() {
