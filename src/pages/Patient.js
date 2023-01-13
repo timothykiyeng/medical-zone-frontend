@@ -1,8 +1,8 @@
-const PatientList = () => {
+const Patient = () => {
     return ( 
         <>
             <div>
-                <h1 className="header text-gray-700 text-center md:my-8 my-4">Patient List</h1>
+                <h1 className="header text-gray-700 text-center md:my-8 my-4">Patient History</h1>
                 <div>
                     
                 </div>
@@ -11,4 +11,4 @@ const PatientList = () => {
      );
 }
  
-export default PatientList;
+export default Patient;
