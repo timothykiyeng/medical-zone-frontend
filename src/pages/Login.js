@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../Login.css";
 
 const Login = ({ setUser }) => {
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ const Login = ({ setUser }) => {
     if (confirmPassword !== signupData.password) {
       alert("Passwords dont' match!");
     }
-    fetch("http://127.0.0.1:3000/patients", {
+    fetch("/patients", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,20 +91,19 @@ const Login = ({ setUser }) => {
     setLoginData({ email: "", password: "" });
     setError([]);
   };
-
   const handlePatClick = () => {
     setDocLogin(false);
     setPatLogin(true);
     setLoginData({ email: "", password: "" });
     setError([]);
   };
-
   const handleSignupClick = () => {
     setDocLogin(false);
     setPatLogin(false);
     setLoginData({ name: "", email: "", password: "", birthdate: "" });
     setErrors([]);
   };
+
   return (
     <div className="login">
       <figure className="login-form-box">
@@ -120,17 +120,16 @@ const Login = ({ setUser }) => {
           >
             Patient
           </button>
-          <button
+          {/* <button
             className={docLogin || patLogin ? null : "active"}
             onClick={handleSignupClick}
           >
             SignUp{" "}
-          </button>
+          </button> */}
         </div>
         {docLogin || patLogin ? (
           <form className="input-group" onSubmit={handleLoginSubmit}>
             <label className="input-label">
-              {" "}
               {docLogin ? "Employee " : "Patient "}Email:
             </label>
             <input
@@ -144,7 +143,6 @@ const Login = ({ setUser }) => {
             <br></br>
             <br></br>
             <br></br>
-
             <label className="input-label">Password:</label>
             <input
               className="input"
