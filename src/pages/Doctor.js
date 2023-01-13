@@ -1,30 +1,39 @@
-import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import BookAppointment from "../components/doctors/BookAppointments"
+import PatientList from "../components/doctors/PatientList"
 
 const Doctor = () => {
-    const { id } = useRef()
-    
+    // const { id } = useRef()
+    const [show, setShow] = useState(false)
+    const [open,  setOpen] = useState(false)
+
+
     return ( 
         <>
             <div className="md:mt-16 mt-12 md:mb-32 mb-16 md:mx-16 mx-6">
                 <div className="md:flex justify-center items-center">
-                    <Link 
-                        to={`/doctor/${id}`}
+                    <button
+                        onClick={() => setOpen((prev) => !prev)}
                         className='btn text-white bg-blue-400 uppercase font-medium md:mx-8 mx-4'
                         >
                         Patients
-                    </Link>
-                    <Link 
-                        to={`/doctor/${id}`}
+                    </button>
+                    <button 
                         className='btn'
+                        onClick={() => setShow((prev) => !prev)}
                         >
                         Book Appointment
-                    </Link>
+                    </button>
                 </div>
 
                 {/* list of all patients */}
-                <div>
-                    
+                <div className="">
+                    <div className={`${open ? !show : "hidden" } `}>
+                        <PatientList />
+                    </div>
+                    <div className={`${show ? "" : "hidden"}`}>
+                        <BookAppointment />
+                    </div>
                 </div>
             </div>
         </>
