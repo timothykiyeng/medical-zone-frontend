@@ -24,7 +24,6 @@ function App() {
           <Route path='/signup' element={ <Signup /> }/>
           <Route path='/doctor' element={<Doctor />} />
           <Route path='/patient' element={<Patient /> } />
-          <Route path='/calendar' element={<Calendar /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
