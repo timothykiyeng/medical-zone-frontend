@@ -78,26 +78,26 @@ const BookAppointments = () => {
                             <input 
                                 type="text" 
                                 className="title"
-                                placeholder="Add Title" 
+                                placeholder="Add Title..." 
                                 value={newAppointment.title} 
                                 onChange={(e) => setNewAppointment({ ...newAppointment, title: e.target.value })} 
                             />
                             <input 
                                 type="text" 
                                 className="title"
-                                placeholder="Add Name" 
+                                placeholder="Add Patient's Name..." 
                                 value={newAppointment.name} 
                                 onChange={(e) => setNewAppointment({ ...newAppointment, name: e.target.value })} 
                             />
                             <DatePicker
                                 className="datepicker" 
-                                placeholderText="Start Date" 
+                                placeholderText="Start Date..." 
                                 selected={newAppointment.start} 
                                 onChange={(start) => setNewAppointment({ ...newAppointment, start })} 
                             />
                             <DatePicker
                                 className="datepicker" 
-                                placeholderText="End Date" 
+                                placeholderText="End Date..." 
                                 selected={newAppointment.end} 
                                 onChange={(end) => setNewAppointment({ ...newAppointment, end })} 
                             />

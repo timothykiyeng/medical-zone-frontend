@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Doctor from './pages/Doctor';
-import Patient from './pages/patients/Patient';
+import Patient from './pages/Patient';
 
 
 function App() {
