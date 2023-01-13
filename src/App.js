@@ -9,6 +9,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Doctor from './pages/Doctor';
 import Patient from './pages/Patient';
+import Calendar from './pages/Calendar';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/signup' element={ <Signup /> }/>
           <Route path='/doctor' element={<Doctor />} />
           <Route path='/patient' element={<Patient /> } />
+          <Route path='/calendar' element={<Calendar /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
