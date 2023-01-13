@@ -31,7 +31,7 @@ const About = () => {
                     <h2 className='md:text-1xl font-medium text-2xl text-black text-center'>We're an ambitious and smart team with a shared mission</h2>
 
                 </div>
-                <div className='flex truncate justify-center space-x-8 text-base font-semibold' >
+                <div className='flex justify-center space-x-8 text-base font-semibold' >
                     <IconContext.Provider value={{size:'4rem' ,color: 'gb(236 72 153)' }} >
                     <h1><SlEmotsmile size='4rem' color='rgb(236 72 153)'/>Customer Happiness</h1>
                     <h1><GiProgression size='4rem' color='rgb(236 72 153)'/>Customer Progress</h1>
@@ -39,6 +39,26 @@ const About = () => {
                     <h1><HiOutlineUserGroup size='4rem' color='rgb(236 72 153)'/>Customer Progress</h1>
                     </IconContext.Provider>
                     </div>
+            </div>
+            <div className='flex flex-col justify-center'>
+                <h1>Our Team</h1>
+            </div>
+
+
+
+            
+            <div className='flex flex-col justify-center items-center pt-10 p-10 text-pink-700 font-semibold'>
+                
+                <h1>LINKS</h1>
+                <ul>
+                    <li className='p-4 font-normal'>Home</li>
+                    <li className='p-4 font-normal'>About</li>
+                    <li className='p-4 font-normal'>Services</li>
+                    <li className='p-4 font-normal'>Contact</li>
+                </ul>
+            </div>
+            <div className='flex flex-col justify-center '>
+                <h2>SUPPORT</h2>
             </div>
         </>
      );
