@@ -81,7 +81,7 @@ const Signup = ({ setUser }) => {
         <input
           type="text"
           name="birthdate"
-          placeholder="Birthdate"
+          placeholder="dd/mm/yyyy"
           value={signupData.birthdate}
           onChange={handleChange}
         />
@@ -92,35 +92,17 @@ const Signup = ({ setUser }) => {
           value={signupData.age}
           onChange={handleChange}
         />
-        <label>
-          Doctor
-          <input
-            type="checkbox"
-            name="doc"
-            checked={signupData.doc}
-            onChange={(e) =>
-              handleChange({ target: { name: "doc", value: e.target.checked } })
-            }
-          />{" "}
-        </label>
-        <div className="gender-radio">
-          <input
-            type="radio"
-            id="male"
-            name="gender"
-            value="male"
+        <div className="gender-select">
+          <select
+            id="gender-select"
+            placeholder="Gender"
             onChange={(e) => setGender(e.target.value)}
-          />
-          <label htmlFor="male">Male</label>
-          <input
-            type="radio"
-            id="female"
-            name="gender"
-            value="female"
-            onChange={(e) => setGender(e.target.value)}
-          />
-          <label htmlFor="female">Female</label>
+          >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
         </div>
+
         <button type="submit">Sign Up</button>
       </form>
       {errors.length > 0 ? (
