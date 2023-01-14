@@ -39,7 +39,7 @@ const Signup = ({ setUser }) => {
           .then((user) => {
             setUser(user);
           })
-          .then(() => navigate("/"));
+          .then(() => navigate("/patient"));
       } else {
         r.json().then((json) => setErrors(json.errors));
       }
@@ -48,8 +48,13 @@ const Signup = ({ setUser }) => {
 
   return (
     <div className="signup flex flex-col items-center justify-center md:min-h-[80vh] min-h-[82vh]">
-      <h1 className="header text-gray-700 text-center md:my-8 my-4">Get Started</h1>
-      <form onSubmit={handleSignUpSubmit} className='bg-sky-400 md:py-16 py-8 md:px-12 px-6 rounded-lg'>
+      <h1 className="header text-gray-700 text-center md:my-8 my-4">
+        Get Started
+      </h1>
+      <form
+        onSubmit={handleSignUpSubmit}
+        className="bg-sky-400 md:py-16 py-8 md:px-12 px-6 rounded-lg"
+      >
         <input
           type="text"
           name="name"
@@ -104,20 +109,23 @@ const Signup = ({ setUser }) => {
           </select>
         </div>
 
-        <button type="submit" className="btn w-full font-medium text-lg">Sign Up</button>
+        <button type="submit" className="btn w-full font-medium text-lg">
+          Sign Up
+        </button>
 
         <div className="mt-8 flex justify-between items-center">
           <p>Already have an account?</p>
-          <Link to='/login' className="mx-2 text-white font-medium uppercase">
+          <Link to="/login" className="mx-2 text-white font-medium uppercase">
             Login
           </Link>
         </div>
-
       </form>
       {errors.length > 0 ? (
         <ul className="my-4">
           {errors.map((error) => (
-            <li className="text-red-500 font-medium text-xl" key={error}>{error}</li>
+            <li className="text-red-500 font-medium text-xl" key={error}>
+              {error}
+            </li>
           ))}
         </ul>
       ) : null}
