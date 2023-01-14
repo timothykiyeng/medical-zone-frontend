@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Login.css";
 
 const Login = ({ setUser }) => {
@@ -105,9 +105,9 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="login">
-      <figure className="login-form-box">
-        <div className="selector">
+    <div className="login md:min-h-[80vh] min-h-[82vh] flex flex-col items-center justify-center">
+      <figure className="login-form-box ">
+        <div className="selector ">
           <button
             className={docLogin ? "active" : null}
             onClick={handleDocClick}
@@ -120,129 +120,135 @@ const Login = ({ setUser }) => {
           >
             Patient
           </button>
-          {/* <button
-            className={docLogin || patLogin ? null : "active"}
-            onClick={handleSignupClick}
-          >
-            SignUp{" "}
-          </button> */}
+          
         </div>
-        {docLogin || patLogin ? (
-          <form className="input-group" onSubmit={handleLoginSubmit}>
-            <label className="input-label">
-              {docLogin ? "Employee " : "Patient "}Email:
-            </label>
-            <input
-              className="input"
-              type="text"
-              name="email"
-              id="email"
-              onChange={handleChange}
-              value={loginData.email}
-            ></input>
-            <br></br>
-            <br></br>
-            <br></br>
-            <label className="input-label">Password:</label>
-            <input
-              className="input"
-              type="password"
-              name="password"
-              id="password"
-              onChange={handleChange}
-              value={loginData.password}
-            ></input>
-            <br></br>
-            {error ? <p className="error">{error}</p> : null}
-            <br></br>
-            <a
-              href="#"
-              onClick={handleLoginSubmit}
-              value="Login"
-              className="button"
-            >
-              Login
-            </a>
-            <br></br>
-            <br></br>
-            <br></br>
-          </form>
-        ) : (
-          <form className="input-group">
-            <label className="input-label">Name:</label>
-            <input
-              className="input"
-              type="text"
-              name="name"
-              id="name"
-              onChange={handleSignUpChange}
-              value={signupData.name}
-            ></input>
-            <br></br>
-            <br></br>
-            <label className="input-label">Email:</label>
-            <input
-              className="input"
-              type="text"
-              name="email"
-              id="email"
-              onChange={handleSignUpChange}
-              value={signupData.email}
-            ></input>
-            <br></br>
-            <br></br>
-            <label className="input-label">Age:</label>
-            <input
-              className="input"
-              type="text"
-              name="age"
-              id="age"
-              onChange={handleSignUpChange}
-              value={signupData.age}
-            ></input>
-            <br></br>
-            <br></br>
-            <label className="input-label">Birthdate:</label>
-            <input
-              className="input"
-              type="text"
-              placeholder="mm/dd/yyyy"
-              name="birthdate"
-              id="birthdate"
-              onChange={handleSignUpChange}
-              value={signupData.birthdate}
-            ></input>
-            <br></br>
-            <br></br>
-            <label className="input-label">Password:</label>
-            <input
-              className="input"
-              type="password"
-              name="password"
-              id="password"
-              onChange={handleSignUpChange}
-              value={signupData.password}
-            ></input>
-            <br></br>
-            <br></br>
-            <label className="input-label">Confirm Password:</label>
-            <input
-              className="input"
-              type="password"
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            ></input>
-            {errors ? errors.map((e) => <p className="error">{e}</p>) : null}
-            <br></br>
-            <br></br>
-            <br></br>
-            <a href="#" onClick={handleSignUpSubmit} className="button">
-              Sign Up
-            </a>
-            <br></br>
-            <br></br>
-            <br></br>
-          </form>
-        )}
+        
+        <div className="flex justify-center items-center md:mt-16 mt-8">
+          {docLogin || patLogin ? (
+            <form className="input-group bg-sky-400 md:py-16 py-8 md:px-12 px-6 rounded-lg" onSubmit={handleLoginSubmit}>
+              <div>
+                <label className="text-lg font-medium text-gray-800">
+                  {docLogin ? "Doctor's " : "Patient "} Email:
+                </label><br/>
+                <input
+                  className="input   mt-2"
+                  type="text"
+                  name="email"
+                  id="email"
+                  onChange={handleChange}
+                  value={loginData.email}
+                ></input>
+              </div>
+              <div className="mt-4">
+                <label className="input-label text-lg font-medium text-gray-800">
+                  Password:
+                </label><br/>
+                <input
+                  className="input mt-2"
+                  type="password"
+                  name="password"
+                  id="password"
+                  onChange={handleChange}
+                  value={loginData.password}
+                ></input>
+              </div>
+
+              {error ? <p className="error text-red-500 mb-4">{error}</p> : null}
+
+              
+              <button onClick={handleLoginSubmit} value="Login" className="btn w-full font-medium text-lg">
+                Login
+              </button>
+
+              <div className="mt-8 flex justify-between items-center">
+                <p>Don't have an account?</p>
+                <Link to='/signup' className="mx-2 text-white font-medium uppercase">
+                  Signup
+                </Link>
+              </div>
+
+            </form>
+            ) : (
+              <form className="input-group">
+                <div>
+                  <label className="input-label">Name:</label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="name"
+                    id="name"
+                    onChange={handleSignUpChange}
+                    value={signupData.name}
+                  ></input>
+                </div>
+                
+                <div>
+                  <label className="input-label">Email:</label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="email"
+                    id="email"
+                    onChange={handleSignUpChange}
+                    value={signupData.email}
+                ></input>
+                </div>
+                
+                <div>
+                  <label className="input-label">Age:</label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="age"
+                    id="age"
+                    onChange={handleSignUpChange}
+                    value={signupData.age}
+                  ></input>
+                </div>
+                
+                <div>
+                  <label className="input-label">Birthdate:</label>
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="mm/dd/yyyy"
+                    name="birthdate"
+                    id="birthdate"
+                    onChange={handleSignUpChange}
+                    value={signupData.birthdate}
+                  ></input>
+                </div>
+
+                <div>
+                  <label className="input-label">Password:</label>
+                  <input
+                    className="input"
+                    type="password"
+                    name="password"
+                    id="password"
+                    onChange={handleSignUpChange}
+                    value={signupData.password}
+                  ></input>
+                </div>
+                
+                <div>
+                  <label className="input-label">Confirm Password:</label>
+                  <input
+                    className="input"
+                    type="password"
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                  ></input>
+                </div>
+
+                {errors ? errors.map((e) => <p className="error">{e}</p>) : null}
+
+                <button onClick={handleSignUpSubmit} className="button">
+                  Sign Up
+                </button>
+            </form>
+          )}
+        </div>
+
       </figure>
     </div>
   );
