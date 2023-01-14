@@ -1,0 +1,29 @@
+.signup {
+  background-color: #00bfff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.signup h1 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+.signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+.signup button[type="submit"] {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
