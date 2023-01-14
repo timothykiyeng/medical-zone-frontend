@@ -9,9 +9,12 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Doctor from './pages/Doctor';
 import Patient from './pages/Patient';
+import { useState } from 'react';
 
 
 function App() {
+  const [user, setUser] = useState(null)
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -20,8 +23,8 @@ function App() {
           <Route path='/' element={ <Home /> }/>
           <Route path='/about' element={ <About /> }/>
           <Route path='/contact' element={ <Contact /> }/>
-          <Route path='/login' element={ <Login /> }/>
-          <Route path='/signup' element={ <Signup /> }/>
+          <Route path='/login' element={ <Login setUser={setUser}  /> }/>
+          <Route path='/signup' element={ <Signup setUser={setUser} /> }/>
           <Route path='/doctor' element={<Doctor />} />
           <Route path='/patient' element={<Patient /> } />
         </Routes>

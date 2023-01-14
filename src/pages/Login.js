@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Login.css";
 
 const Login = ({ setUser }) => {
@@ -131,7 +131,7 @@ const Login = ({ setUser }) => {
                   {docLogin ? "Doctor's " : "Patient "} Email:
                 </label><br/>
                 <input
-                  className="input mt-2"
+                  className="input   mt-2"
                   type="text"
                   name="email"
                   id="email"
@@ -153,12 +153,19 @@ const Login = ({ setUser }) => {
                 ></input>
               </div>
 
-              {error ? <p className="error">{error}</p> : null}
+              {error ? <p className="error text-red-500 mb-4">{error}</p> : null}
 
               
               <button onClick={handleLoginSubmit} value="Login" className="btn w-full font-medium text-lg">
                 Login
               </button>
+
+              <div className="mt-8 flex justify-between items-center">
+                <p>Don't have an account?</p>
+                <Link to='/signup' className="mx-2 text-white font-medium uppercase">
+                  Signup
+                </Link>
+              </div>
 
             </form>
             ) : (

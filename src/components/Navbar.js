@@ -7,6 +7,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
 
     const navlinks = [
+        {path: '/', name: 'Home'},
         {path: '/about', name: 'About'},
         {path: '/contact', name: 'Contact'}
     ]
@@ -32,6 +33,22 @@ const Navbar = () => {
                                     <Link to={navlink.path}>{navlink.name}</Link>
                                 </li>
                             ))}
+
+                            {/* {user = doc ? (
+                                <li className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
+                                    <Link to='/doctor'>Doctor</Link>
+                                </li>
+                                ) : user = patient (
+                                    <li className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
+                                        <Link to='/patient'>Doctor</Link>
+                                    </li>
+                                ) ? (
+                                    <li className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
+                                        <Link to='/'>Home</Link>
+                                    </li>
+                                ) : null
+                            } */}
+
                             <li className='md:mx-8 md:my-0 my-4'>
                                 <Link 
                                     className="bg-white px-4 py-2 hover:bg-pink-500 hover:text-white duration-500 rounded-md" 

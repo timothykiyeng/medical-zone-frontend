@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Signup.css";
 const Signup = ({ setUser }) => {
   const navigate = useNavigate();
@@ -105,11 +105,19 @@ const Signup = ({ setUser }) => {
         </div>
 
         <button type="submit" className="btn w-full font-medium text-lg">Sign Up</button>
+
+        <div className="mt-8 flex justify-between items-center">
+          <p>Already have an account?</p>
+          <Link to='/login' className="mx-2 text-white font-medium uppercase">
+            Login
+          </Link>
+        </div>
+
       </form>
       {errors.length > 0 ? (
-        <ul>
+        <ul className="my-4">
           {errors.map((error) => (
-            <li key={error}>{error}</li>
+            <li className="text-red-500 font-medium text-xl" key={error}>{error}</li>
           ))}
         </ul>
       ) : null}

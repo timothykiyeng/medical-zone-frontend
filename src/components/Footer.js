@@ -3,6 +3,10 @@ import { BsGithub, BsInstagram, BsTwitter, BsLinkedin, BsFacebook } from "react-
 
 
 const Footer = () => {
+    const date = new Date()
+    const currentYear = date.getFullYear()
+    // console.log(currentYear)
+
     return ( 
         <>
             <footer className="bg-pink-400 md:py-12 py-6">
@@ -12,7 +16,8 @@ const Footer = () => {
                     </div>
 
                     <div className="md:my-0 my-2">
-                        <p>Copyright &copy; 2022 |  
+                        <p>Copyright &copy; 
+                            <span className="mr-1">{currentYear}</span>|  
                             <Link 
                                 to='/'
                                 className="text-white md:mll-2 ml-1"
