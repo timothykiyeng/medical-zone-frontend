@@ -50,6 +50,10 @@ const Signup = ({ setUser }) => {
     <div className="signup flex flex-col items-center justify-center md:min-h-[80vh] min-h-[82vh]">
       <h1 className="header text-gray-700 text-center md:my-8 my-4">Get Started</h1>
       <form onSubmit={handleSignUpSubmit} className='bg-sky-400 md:py-16 py-8 md:px-12 px-6 rounded-lg'>
+
+    <div className="signup">
+      <h1>Get started</h1>
+      <form onSubmit={handleSignUpSubmit}>
         <input
           type="text"
           name="name"
@@ -105,6 +109,9 @@ const Signup = ({ setUser }) => {
         </div>
 
         <button type="submit" className="btn w-full font-medium text-lg">Sign Up</button>
+
+        <button type="submit">Sign Up</button>
+
       </form>
       {errors.length > 0 ? (
         <ul>

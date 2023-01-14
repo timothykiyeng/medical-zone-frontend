@@ -108,6 +108,9 @@ const Login = ({ setUser }) => {
     <div className="login md:min-h-[80vh] min-h-[82vh] flex flex-col items-center justify-center">
       <figure className="login-form-box ">
         <div className="selector ">
+    <div className="login">
+      <figure className="login-form-box">
+        <div className="selector">
           <button
             className={docLogin ? "active" : null}
             onClick={handleDocClick}
@@ -242,6 +245,130 @@ const Login = ({ setUser }) => {
           )}
         </div>
 
+
+          {/* <button
+            className={docLogin || patLogin ? null : "active"}
+            onClick={handleSignupClick}
+          >
+            SignUp{" "}
+          </button> */}
+        </div>
+        {docLogin || patLogin ? (
+          <form className="input-group" onSubmit={handleLoginSubmit}>
+            <label className="input-label">
+              {docLogin ? "Employee " : "Patient "}Email:
+            </label>
+            <input
+              className="input"
+              type="text"
+              name="email"
+              id="email"
+              onChange={handleChange}
+              value={loginData.email}
+            ></input>
+            <br></br>
+            <br></br>
+            <br></br>
+            <label className="input-label">Password:</label>
+            <input
+              className="input"
+              type="password"
+              name="password"
+              id="password"
+              onChange={handleChange}
+              value={loginData.password}
+            ></input>
+            <br></br>
+            {error ? <p className="error">{error}</p> : null}
+            <br></br>
+            <a
+              href="#"
+              onClick={handleLoginSubmit}
+              value="Login"
+              className="button"
+            >
+              Login
+            </a>
+            <br></br>
+            <br></br>
+            <br></br>
+          </form>
+        ) : (
+          <form className="input-group">
+            <label className="input-label">Name:</label>
+            <input
+              className="input"
+              type="text"
+              name="name"
+              id="name"
+              onChange={handleSignUpChange}
+              value={signupData.name}
+            ></input>
+            <br></br>
+            <br></br>
+            <label className="input-label">Email:</label>
+            <input
+              className="input"
+              type="text"
+              name="email"
+              id="email"
+              onChange={handleSignUpChange}
+              value={signupData.email}
+            ></input>
+            <br></br>
+            <br></br>
+            <label className="input-label">Age:</label>
+            <input
+              className="input"
+              type="text"
+              name="age"
+              id="age"
+              onChange={handleSignUpChange}
+              value={signupData.age}
+            ></input>
+            <br></br>
+            <br></br>
+            <label className="input-label">Birthdate:</label>
+            <input
+              className="input"
+              type="text"
+              placeholder="mm/dd/yyyy"
+              name="birthdate"
+              id="birthdate"
+              onChange={handleSignUpChange}
+              value={signupData.birthdate}
+            ></input>
+            <br></br>
+            <br></br>
+            <label className="input-label">Password:</label>
+            <input
+              className="input"
+              type="password"
+              name="password"
+              id="password"
+              onChange={handleSignUpChange}
+              value={signupData.password}
+            ></input>
+            <br></br>
+            <br></br>
+            <label className="input-label">Confirm Password:</label>
+            <input
+              className="input"
+              type="password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            ></input>
+            {errors ? errors.map((e) => <p className="error">{e}</p>) : null}
+            <br></br>
+            <br></br>
+            <br></br>
+            <a href="#" onClick={handleSignUpSubmit} className="button">
+              Sign Up
+            </a>
+            <br></br>
+            <br></br>
+            <br></br>
+          </form>
+        )}
       </figure>
     </div>
   );
