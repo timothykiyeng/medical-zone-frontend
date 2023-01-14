@@ -1,13 +1,9 @@
 .signup {
-  background-color: #00bfff;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
 }
-.signup h1 {
-  color: #ff69b4;
-  margin-bottom: 20px;
-}
+
 .signup form {
   display: flex;
   flex-direction: column;

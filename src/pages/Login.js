@@ -105,7 +105,7 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="login min-h-[80vh] flex flex-col items-center justify-center">
+    <div className="login md:min-h-[80vh] min-h-[82vh] flex flex-col items-center justify-center">
       <figure className="login-form-box ">
         <div className="selector ">
           <button
@@ -127,7 +127,7 @@ const Login = ({ setUser }) => {
           {docLogin || patLogin ? (
             <form className="input-group bg-sky-400 md:py-16 py-8 md:px-12 px-6 rounded-lg" onSubmit={handleLoginSubmit}>
               <div>
-                <label className="text-left ">
+                <label className="text-lg font-medium text-gray-800">
                   {docLogin ? "Doctor's " : "Patient "} Email:
                 </label><br/>
                 <input
@@ -140,7 +140,9 @@ const Login = ({ setUser }) => {
                 ></input>
               </div>
               <div className="mt-4">
-                <label className="input-label">Password:</label><br/>
+                <label className="input-label text-lg font-medium text-gray-800">
+                  Password:
+                </label><br/>
                 <input
                   className="input mt-2"
                   type="password"
@@ -154,7 +156,7 @@ const Login = ({ setUser }) => {
               {error ? <p className="error">{error}</p> : null}
 
               
-              <button onClick={handleLoginSubmit} value="Login" className="btn">
+              <button onClick={handleLoginSubmit} value="Login" className="btn w-full font-medium text-lg">
                 Login
               </button>
 
