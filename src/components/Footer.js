@@ -17,7 +17,7 @@ const Footer = () => {
 
                     <div className="md:my-0 my-2">
                         <p>Copyright &copy; 
-                            <span className="mr-1">{currentYear}</span>|  
+                            <span className="mx-1">{currentYear}</span>|  
                             <Link 
                                 to='/'
                                 className="text-white md:mll-2 ml-1"
