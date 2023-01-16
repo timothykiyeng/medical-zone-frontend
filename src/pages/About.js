@@ -14,3 +14,7 @@ const About = () => (
       No more phone tag or long wait times - simply book an appointment at your
       convenience and have all your medical history at your fingertips.
     </p>
+    <div className="part3">
+      <div className="part3img">
+        <img src="../happy.png" alt="" />
+      </div>
