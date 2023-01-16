@@ -29,3 +29,10 @@ const About = () => (
             your medical history, and communicate with your healthcare provider.
           </p>
         </div>
+        </div>
+    </div>
+    <div id="about" className="container-fluid"></div>
+    <div className="products">
+      <div className="tproduct2">
+        <h2>Our Values</h2>
+      </div>
