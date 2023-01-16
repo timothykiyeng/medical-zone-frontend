@@ -18,3 +18,14 @@ const About = () => (
       <div className="part3img">
         <img src="../happy.png" alt="" />
       </div>
+      <div className="part3t">
+        <div className="part3title tproduct">
+          <h2>Why you should choose us.</h2>
+          <p className="recomendation-dsn">
+            Doctor Appointments is a user-friendly and reliable platform that
+            connects patients with their doctors.
+            <br />
+            Our platform allows you to easily book appointments, view and update
+            your medical history, and communicate with your healthcare provider.
+          </p>
+        </div>
