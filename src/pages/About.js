@@ -57,3 +57,10 @@ const About = () => (
               <br />
               by making it more convenient and accessible for all.
             </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+export default About;
