@@ -8,3 +8,6 @@ const About = () => (
       <br />
       Well, look no further!
       <br />
+      Our app, Doctor Appointments, is here to make the process of scheduling
+      and managing appointments a breeze.
+      <br />
