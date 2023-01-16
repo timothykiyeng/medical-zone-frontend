@@ -47,3 +47,13 @@ const About = () => (
               easy and efficient for both patients and healthcare providers.
             </p>
           </div>
+          </div>
+        <div className="card1a">
+          <div className="imgcard1ainfo">
+            <h3>VISION:</h3>
+            <p>
+              Our vision is to revolutionize the way healthcare is accessed and
+              delivered,
+              <br />
+              by making it more convenient and accessible for all.
+            </p>
