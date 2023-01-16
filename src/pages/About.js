@@ -11,3 +11,6 @@ const About = () => (
       Our app, Doctor Appointments, is here to make the process of scheduling
       and managing appointments a breeze.
       <br />
+      No more phone tag or long wait times - simply book an appointment at your
+      convenience and have all your medical history at your fingertips.
+    </p>
