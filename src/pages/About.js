@@ -36,3 +36,7 @@ const About = () => (
       <div className="tproduct2">
         <h2>Our Values</h2>
       </div>
+      <div className="card1">
+        <div className="card1a">
+          <div className="imgcard1ainfo">
+            <h3>MISSION:</h3>
