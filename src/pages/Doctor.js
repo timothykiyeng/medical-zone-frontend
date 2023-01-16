@@ -2,7 +2,7 @@ import { useState } from "react";
 import BookAppointment from "../components/doctors/BookAppointments"
 import PatientList from "../components/doctors/PatientList"
 
-const Doctor = () => {
+const Doctor = ({appointments}) => {
     // const { id } = useRef()
     const [show, setShow] = useState(false)
     const [open,  setOpen] = useState(false)
@@ -32,7 +32,7 @@ const Doctor = () => {
                         <PatientList />
                     </div>
                     <div className={`${show ? "" : "hidden"}`}>
-                        <BookAppointment />
+                        <BookAppointment appointments={appointments} />
                     </div>
                 </div>
             </div>

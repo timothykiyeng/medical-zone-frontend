@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 
-const Navbar = () => {
+const Navbar = (user) => {
     const [open, setOpen] = useState(false)
 
     const navlinks = [
@@ -11,7 +11,7 @@ const Navbar = () => {
         {path: '/about', name: 'About'},
         {path: '/contact', name: 'Contact'}
     ]
-
+    // console.log(user)
     return ( 
         <>
             <nav className='lg:px-64 md:px-40 px-8 md:py-6 py-4 top-0 left-0 sticky z-[100] bg-sky-400 opacity-100 shadow-xl'>
