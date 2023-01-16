@@ -40,3 +40,10 @@ const About = () => (
         <div className="card1a">
           <div className="imgcard1ainfo">
             <h3>MISSION:</h3>
+            <p>
+              Our mission is to make the process of booking and managing medical
+              appointments
+              <br />
+              easy and efficient for both patients and healthcare providers.
+            </p>
+          </div>
