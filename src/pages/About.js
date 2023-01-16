@@ -6,3 +6,5 @@ const About = () => (
       Looking for an easy and convenient way to book appointments with your
       doctor?
       <br />
+      Well, look no further!
+      <br />
