@@ -2,7 +2,7 @@ import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
-import React, { useState } from "react";
+import { useState, useCallback } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
@@ -82,6 +82,24 @@ function BookAppointments({appointments}) {
         setAllEvents([...allEvents, newEvent]);
     }
 
+    // add new event onclick
+    
+    const handleSelectSlot = useCallback(
+        ({ start, end }) => {
+        const title = window.prompt('New Event Name')
+        if (title) {
+            setAllEvents((prev) => [...prev, { start, end, title }])
+        }
+        },
+        [setAllEvents]
+    )
+
+    // show more info onclick appointment
+    const handleSelectEvent = useCallback(
+        (event) => window.alert(event.title, event.description),
+        []
+    )
+
     return (
         <div className="flex flex-col justify-center mx-2 md:mx-0 md:my-16 my-8">
             <h1 className="header text-gray-700 text-center">Calendar</h1>
@@ -129,7 +147,11 @@ function BookAppointments({appointments}) {
                 events={allEvents} 
                 startAccessor="start" 
                 endAccessor="end" 
-                style={{ height: 600}} />
+                style={{ height: 600}}
+                selectable
+                onSelectEvent={handleSelectEvent}
+                onSelectSlot={handleSelectSlot}
+                />
         </div>
     );
 }
