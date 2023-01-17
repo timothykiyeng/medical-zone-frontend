@@ -2,7 +2,7 @@ import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
-import { useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
@@ -62,6 +62,19 @@ function BookAppointments({appointments}) {
     const [newEvent, setNewEvent] = useState({ title: "", description: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
 
+    // useEffect(() => {
+    //     const apiUrl = "http://localhost:3000/appointments"
+    //     fetch(apiUrl, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             events:title
+    //         })
+    //     })
+    // })
+
     const handleAddEvent = (e) => {
         e.preventDefault();
         
@@ -73,10 +86,9 @@ function BookAppointments({appointments}) {
     const handleSelectSlot = useCallback(
         ({ start, end }) => {
         const title = window.prompt('New Event Name') 
-        const description = window.prompt('New Event Description')
 
-        if (title, description) {
-            setAllEvents((prev) => [...prev, { start, end, title, description }])
+        if (title) {
+            setAllEvents((prev) => [...prev, { start, end, title }])
         }
         },
         [setAllEvents]
@@ -84,7 +96,7 @@ function BookAppointments({appointments}) {
 
     // show more info onclick appointment
     const handleSelectEvent = useCallback(
-        (event) => window.alert(event.title, event.description),
+        (event) => window.alert(`Title: ${event.title}  Desctiption: ${event.description}`),
         []
     )
 
@@ -138,7 +150,6 @@ function BookAppointments({appointments}) {
                 endAccessor="end" 
                 style={{ height: 600}}
                 selectable
-                // onSelectEvent={() => setIsOpen(true)} 
                 onSelectEvent={handleSelectEvent}
                 onSelectSlot={handleSelectSlot}
                 />

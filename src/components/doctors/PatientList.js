@@ -1,9 +1,9 @@
 import UseFetch from "../useFetch";
 
 const PatientList = () => {
-    // const {data: patients} = UseFetch("http://localhost:3000/patients")
+    const {data: patients} = UseFetch("http://localhost:3000/patients")
 
-    // console.log(patients)
+    console.log(patients)
     return ( 
         <>
             <div>

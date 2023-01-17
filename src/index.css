@@ -21,6 +21,11 @@ body {
   .header {
     @apply md:text-4xl text-3xl text-gray-800 font-semibold my-2
   }
+
+  .content {
+    @apply md:text-xl text-lg text-gray-800 font-light my-2
+  }
+
   .datepicker, .title {
     @apply my-2 rounded-md border-2 w-full pl-2 pr-4 py-2 md:mx-2 outline-none focus-within:border-sky-500 
   }
