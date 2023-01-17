@@ -17,8 +17,10 @@ function App() {
   const [user, setUser] = useState(null)
   const {data:appointments} = UseFetch("http://localhost:3000/appointments")
   // const {data:patients} = UseFetch("http://localhost:3000/patients")
-  
+    
+  // user.doc ? console.log("doctor logged in") : console.log("you are not logged in")
   // console.log(patients)
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -30,7 +32,7 @@ function App() {
           <Route path='/login' element={ <Login setUser={setUser}  /> }/>
           <Route path='/signup' element={ <Signup setUser={setUser} /> }/>
           <Route path='/doctor' element={<Doctor appointments={appointments} />} />
-          <Route path='/patient' element={<Patient /> } />
+          <Route path='/patient' element={<Patient user={user} /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
