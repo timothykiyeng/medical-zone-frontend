@@ -54,41 +54,29 @@ const localizer = dateFnsLocalizer({
     ]
 
 function BookAppointments({appointments}) {
-    // console.log(events)
     // const events = appointments
     console.log(events)
 
+    // {connect this to backend}
 
-    const [newEvent, setNewEvent] = useState({ title: "", description: "", start_date: "", end: "" });
+    const [newEvent, setNewEvent] = useState({ title: "", description: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
 
     const handleAddEvent = (e) => {
         e.preventDefault();
         
-        for (let i=0; i<allEvents.length; i++){
-
-            const d1 = new Date (allEvents[i].start_date);
-            const d2 = new Date(newEvent.start_date);
-            const d3 = new Date(allEvents[i].end);
-            const d4 = new Date(newEvent.end);
-
-            if (( (d1  <= d2) && (d2 <= d3) ) || ( (d1  <= d4) && (d4 <= d3) ))
-            {   
-                alert("Appointment made successfully!"); 
-                break;
-            }
-        }
-        
         setAllEvents([...allEvents, newEvent]);
     }
 
-    // add new event onclick
+    // add new event onclick {connect this to backend}
     
     const handleSelectSlot = useCallback(
         ({ start, end }) => {
-        const title = window.prompt('New Event Name')
-        if (title) {
-            setAllEvents((prev) => [...prev, { start, end, title }])
+        const title = window.prompt('New Event Name') 
+        const description = window.prompt('New Event Description')
+
+        if (title, description) {
+            setAllEvents((prev) => [...prev, { start, end, title, description }])
         }
         },
         [setAllEvents]
@@ -123,14 +111,14 @@ function BookAppointments({appointments}) {
                     <DatePicker
                         className="datepicker"  
                         placeholderText="Start Date" 
-                        selected={newEvent.start_date} 
-                        onChange={(start_date) => setNewEvent({ ...newEvent, start_date })} 
+                        selected={newEvent.start} 
+                        onChange={(start) => setNewEvent({ ...newEvent, start })} 
                     />
                     <DatePicker
                         className="datepicker"  
                         placeholderText="End Date" 
-                        selected={newEvent.end_date} 
-                        onChange={(end_date) => setNewEvent({ ...newEvent, end_date })} 
+                        selected={newEvent.end} 
+                        onChange={(end) => setNewEvent({ ...newEvent, end })} 
                     />
                 </div>
                 <div className="flex justify-center items-center">
@@ -143,12 +131,14 @@ function BookAppointments({appointments}) {
             </form>
 
             <Calendar 
+                className="z-[0]"
                 localizer={localizer} 
                 events={allEvents} 
                 startAccessor="start" 
                 endAccessor="end" 
                 style={{ height: 600}}
                 selectable
+                // onSelectEvent={() => setIsOpen(true)} 
                 onSelectEvent={handleSelectEvent}
                 onSelectSlot={handleSelectSlot}
                 />
