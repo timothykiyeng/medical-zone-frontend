@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Login.css";
 
+const api = "https://medicalzone-xra7.onrender.com"
+
 const Login = ({ setUser }) => {
   const navigate = useNavigate();
   const [error, setError] = useState([]);
@@ -36,8 +38,8 @@ const Login = ({ setUser }) => {
     setError([]);
     fetch(
       docLogin
-        ? "http://127.0.0.1:3000/doclogin"
-        : "http://127.0.0.1:3000/patientlogin",
+        ? `${api}/doclogin`
+        : `${api}/patientlogin`,
       {
         method: "POST",
         headers: {
