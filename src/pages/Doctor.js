@@ -4,7 +4,7 @@ import PatientList from "../components/doctors/PatientList"
 
 const Doctor = ({appointments}) => {
     // const { id } = useRef()
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(true)
     const [open,  setOpen] = useState(false)
 
 
@@ -16,7 +16,7 @@ const Doctor = ({appointments}) => {
                         onClick={() => setOpen((prev) => !prev)}
                         className='btn text-white bg-blue-400 uppercase font-medium md:mx-8 mx-4'
                         >
-                        Patients
+                        Patient List
                     </button>
                     <button 
                         className='btn'
@@ -31,7 +31,7 @@ const Doctor = ({appointments}) => {
                     <div className={`${open ? !show : "hidden" } `}>
                         <PatientList />
                     </div>
-                    <div className={`${show ? "" : "hidden"}`}>
+                    <div className={`${show ? !open : "hidden"}`}>
                         <BookAppointment appointments={appointments} />
                     </div>
                 </div>

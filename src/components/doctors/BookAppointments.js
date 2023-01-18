@@ -2,12 +2,12 @@ import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+// import data from "../../data/data.json";
 
 const locales = {
     "en-US": require("date-fns/locale/en-US"),
@@ -53,27 +53,25 @@ const localizer = dateFnsLocalizer({
         }
     ]
 
+
+
 function BookAppointments({appointments}) {
-    // const events = appointments
-    console.log(events)
+    // var events;
+    // fetch('http://localhost:3000/appointments')
+    // .then(res => res.json())
+    // .then(data => {
+    //     events = data;
+    // })
+    // .then(() => {
+    //     console.log(events);
+    // });
+    // const events = data.appointments
+    console.log(events);
 
     // {connect this to backend}
-
     const [newEvent, setNewEvent] = useState({ title: "", description: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
-
-    // useEffect(() => {
-    //     const apiUrl = "http://localhost:3000/appointments"
-    //     fetch(apiUrl, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({
-    //             events:title
-    //         })
-    //     })
-    // })
+  
 
     const handleAddEvent = (e) => {
         e.preventDefault();
@@ -82,7 +80,6 @@ function BookAppointments({appointments}) {
     }
 
     // add new event onclick {connect this to backend}
-    
     const handleSelectSlot = useCallback(
         ({ start, end }) => {
         const title = window.prompt('New Event Name') 
