@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import Logo from "../assets/logo.png";
 
 const api = "https://medicalzone-xra7.onrender.com"
 
@@ -28,9 +28,11 @@ const Navbar = ({user, setUser}) => {
             <nav className='lg:px-64 md:px-40 px-8 md:py-6 py-4 top-0 left-0 sticky z-[100] bg-sky-400 opacity-100 shadow-xl'>
                 <div className='md:flex items-center justify-between'>
                     <div className="flex justify-between items-center">
-                        <Link to='/' className='md:text-3xl text-xl uppercase font-semibold text-white'>
+                        <Link to='/' className='flex items-center lg:text-3xl md:2xl text-xl uppercase font-semibold text-white'>
+                            <img className="md: md:w-16 w-8" src={Logo} alt="logo"/>
                             Medical Zone
                         </Link>
+                        
                         
                         <button onClick={() => setOpen((prev) => !prev)} className="md:hidden text-xl text-gray-800">
                             {open ? <FaTimes/> : <FaBars/>}
