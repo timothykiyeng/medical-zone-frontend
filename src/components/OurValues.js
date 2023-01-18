@@ -1,4 +1,5 @@
 import data from "../data/data.json"
+import { Slide } from "react-reveal";
 // import FaHome from "react-icons/fa"
 // import FaTimes from "react-icons/fa"
 // import FaUserAlt from "react-icons/fa"
@@ -18,15 +19,17 @@ const OurValues = () => {
                 <h2 className="header text-center">We’re an ambitious and smart team with a shared mission</h2>
                 
                 <div className="md:mt-16 mt-8 md:flex items-center justify-center">
-                    {data.ourvalues.map((value) => (
-                        <div className="flex flex-col items-center justify-center md:mx-6 mx-0 md:my-0 my-8">
-                            {/* {icons.map((icon) => (
-                                <i>{icon.name}</i>
-                            ))} */}
-                            <h2 className="content-header font-medium">{value.name}</h2>
-                            <p className="content text-center">{value.content}</p>
-                        </div>
-                    ))}
+                    <Slide left>
+                        {data.ourvalues.map((value) => (
+                            <div className="flex flex-col items-center justify-center md:mx-6 mx-0 md:my-0 my-8">
+                                {/* {icons.map((icon) => (
+                                    <i>{icon.name}</i>
+                                ))} */}
+                                <h2 className="content-header font-medium">{value.name}</h2>
+                                <p className="content text-center">{value.content}</p>
+                            </div>
+                        ))}
+                    </Slide>
                 </div>
             </div>
 
