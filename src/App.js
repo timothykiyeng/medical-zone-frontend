@@ -11,6 +11,7 @@ import Doctor from './pages/Doctor';
 import Patient from './pages/Patient';
 import { useState } from 'react';
 import Dashboard from './components/Dashboard';
+import UseFetch from './components/useFetch';
 
 
 function App() {
