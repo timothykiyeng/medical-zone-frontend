@@ -3,7 +3,16 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 
-const Navbar = (user) => {
+const api = "https://medicalzone-xra7.onrender.com"
+
+const Navbar = ({user, setUser}) => {
+    function handleLogout(){
+        fetch(`${api}/logout`, {
+            method: 'DELETE',
+        }).then(() => {
+            setUser(null)
+        });
+      }
     const [open, setOpen] = useState(false)
 
     const navlinks = [
@@ -11,7 +20,9 @@ const Navbar = (user) => {
         {path: '/about', name: 'About'},
         {path: '/contact', name: 'Contact'}
     ]
-    // console.log(user)
+    
+    // const [doc, setDoc] = useState(false)
+
     return ( 
         <>
             <nav className='lg:px-64 md:px-40 px-8 md:py-6 py-4 top-0 left-0 sticky z-[100] bg-sky-400 opacity-100 shadow-xl'>
@@ -33,36 +44,39 @@ const Navbar = (user) => {
                                     <Link to={navlink.path}>{navlink.name}</Link>
                                 </li>
                             ))}
-
-                            {/* {user = doc ? (
-                                <li className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
-                                    <Link to='/doctor'>Doctor</Link>
-                                </li>
-                                ) : user = patient (
-                                    <li className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
-                                        <Link to='/patient'>Doctor</Link>
-                                    </li>
-                                ) ? (
-                                    <li className='md:mx-8 md:my-0 my-4 hover:text-pink-100'>
-                                        <Link to='/'>Home</Link>
-                                    </li>
-                                ) : null
-                            } */}
-
-                            <li className='md:mx-8 md:my-0 my-4'>
+                            
+                            <Link 
+                                className="mx-2" 
+                                to='/dashboard'
+                                // to={user(doc) ? ('/doctor') : ('/patient')}
+                                >
+                                {user ? 'Dashboard' : null}
+                            </Link>
+                            {user ?
                                 <Link 
-                                    className="bg-white px-4 py-2 hover:bg-pink-500 hover:text-white duration-500 rounded-md" 
+                                    to='/' 
+                                    onClick={handleLogout}
+                                    className="btn"
+                                    >
+                                        Log Out
+                                </Link>
+                                :
+                                <>
+                                <Link 
+                                    className="bg-white px-4 py-2 hover:bg-pink-400 hover:text-white duration-500 rounded-md" 
                                     to='/login'>
                                         Login
-                                    </Link>
-                            </li>
-                            <li className='md:mx-8 md:my-0 my-4'>
-                                <Link 
-                                    className="btn hover:text-pink-500 hover:bg-white" 
-                                    to='/signup'>
-                                        Signup
                                 </Link>
-                            </li>
+                                
+                                <Link 
+                                    className="btn mx-2 hover:text-pink-500 hover:bg-white" 
+                                    to='/signup'>
+                                        SignUp
+                                    </Link>
+                                </>
+                            }
+                                
+                            
                         </ul>
                     </div>
                 </div>

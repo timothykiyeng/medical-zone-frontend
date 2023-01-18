@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Signup.css";
+
+const api = "https://medicalzone-xra7.onrender.com"
 const Signup = ({ setUser }) => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState([]);
@@ -26,7 +28,7 @@ const Signup = ({ setUser }) => {
     if (confirmPassword !== signupData.password) {
       alert("Passwords dont' match!");
     }
-    fetch("http://127.0.0.1:3000/patients", {
+    fetch(`${api}/patients`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
