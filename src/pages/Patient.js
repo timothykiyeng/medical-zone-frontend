@@ -1,4 +1,17 @@
-const Patient = () => {
+import UseFetch from "../components/useFetch";
+
+
+const Patient = ({user}) => {
+    // const {data: medical_histories} = UseFetch("http://localhost:3000/medical_histories")
+
+    // console.log(user.patient)
+    // if(user.do){
+    //     console.log(medical_histories)
+    // } else {
+    //     return null
+    // }
+
+
     return ( 
         <>
             <div>
