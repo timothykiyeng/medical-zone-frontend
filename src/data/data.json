@@ -3,21 +3,21 @@
     "testimonials": [
         {
             "id": 1,
-            "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
+            "image": "https://media.istockphoto.com/id/685132245/photo/mature-businessman-smiling-over-white-background.jpg?s=612x612&w=0&k=20&c=OJk6U-oCZ31F3TGmarAAg2jVli8ZWTagAcF4P-kNIqA=",
             "name": "John Smith",
-            "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
+            "remarks": "I have been using Medical Zone's services for over a year now and I have been extremely satisfied with the results. Their team is professional, responsive, and always goes above and beyond to meet my needs. I highly recommend them to anyone looking for a reliable and trustworthy service provider."
         },
         {
             "id": 2,
-            "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
+            "image": "https://media.istockphoto.com/id/1289220949/photo/successful-smiling-woman-wearing-eyeglasses-on-grey-wall.jpg?s=612x612&w=0&k=20&c=BjyPRn28F3mc6IiBCf4Ko-lFZisaNUYXBBnAcO47ZgE=",
             "name": "Jenny Jones",
-            "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
+            "remarks": "I was hesitant to try Medical Zone's services at first, but I am so glad I did. Their team exceeded my expectations and delivered a top-notch services. They were easy to work with, and their customer service was excellent. I highly recommend them to anyone looking for a quality service provider."
         },
         {
             "id": 3,
-            "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
+            "image": "https://img.freepik.com/free-photo/portrait-cheerful-caucasian-man_53876-13440.jpg?w=2000",
             "name": "Mark Cuban",
-            "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
+            "remarks": "I have been extremely impressed with Medical Zone's work. They have been prompt, efficient, and have exceeded my expectations. Their team is professional and a pleasure to work with. I highly recommend Medical Zone to anyone looking for a great service."
         }
     ],
 
@@ -25,8 +25,8 @@
         {
             "id": 1,
             "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
-            "title": "Lorem ipsum dolor",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupta ipsum dolor sit amet, consectetur adipiscing elit"
+            "title": "Medical zone",
+            "content": "Our reputation for outstanding care and family-like atmosphere, together with advanced medical technology and facilities ensures we attract leading consultants and specialists from the industry to work with us. All our clinicians are board-certified and come with very high credentials within their field of speciality. Many of our consultant doctors are internationally recognised as well."
         }
     ],
 
@@ -34,46 +34,46 @@
         {
             "id": 1,
             "name": "Customer happiness",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            "content": "Customer happiness is the level of loyalty and satisfaction that your customers experience after engaging with your product or team. "
         },
         {
             "id": 2,
             "name": "Customer progress",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            "content": " Measuring customer progress over time​​ Think about each desired outcome statement as a granular measure of customer progress."
         },
         {
             "id": 3,
             "name": "Customer welfare",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            "content": " One of the goals of competition law, which refers to individual benefit obtained from goods/services consumption. "
         },
         {
             "id": 4,
             "name": "Customer partnership",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            "content": "Customer partnership is a shared journey to create a future for both parties that is better than either could have developed alone.. "
         }
     ],
     "ourteam": [
         {
             "id": 1,
-            "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXv-N1ZV6Osz2mr_4RTUAcfroUQTTmFl4Pnw&usqp=CAU",
             "name": "Ali Mukhtar",
             "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
         },
         {
             "id": 2,
-            "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQomkIN3Vcm-HiL0XWhk45GZe51TRfJ15aX5A&usqp=CAU",
             "name": "Jenny Jones",
             "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
         },
         {
             "id": 3,
-            "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuF9D4TMbmAYZylIJ1hKY9YjL6tqX30buH1w&usqp=CAU",
             "name": "Mark Cuban",
             "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
         },
         {
             "id": 3,
-            "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.blackenterprise.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2012%2F10%2FClarenceOtisJr..jpg&f=1&nofb=1&ipt=2fa2b778b5b64c0b6b4ea2e51ea565e290c183e847e4a1c71c7cca98b8e3a011&ipo=images",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxUJ_kOh-4mPOy2oYS6a7fe6gNfuF17uM61Q&usqp=CAU",
             "name": "Timothy Kiyeng",
             "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
         }

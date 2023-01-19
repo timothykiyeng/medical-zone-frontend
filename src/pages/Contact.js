@@ -28,7 +28,7 @@ const Contact = () => {
                 <div className='md:flex justify-around md:mx-0 mx-8 md:my-16 my-8'>
                     <div>
                         <h1 className='md:text-4xl text-2xl mb-3 font-semibold text-gray-700'>Contact Us</h1>
-                        <p className='md:text-lg text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <p className='md:text-lg text-sm'>Reach out to us to get more information about our hospital.</p>
                         <ContactForm />
                     </div>
                     <div className='flex flex-col text-lg md:mt-0 mt-16'>
