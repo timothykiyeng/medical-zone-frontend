@@ -10,7 +10,7 @@ const Doctor = ({appointments}) => {
 
     return ( 
         <>
-            <div className="md:mt-16 mt-12 md:mb-32 mb-16 md:mx-16 mx-6 min-h-[56vh]">
+            <div className="md:mt-16 mt-12 md:mb-32 mb-16 md:mx-16 mx-6 min-h-[55vh]">
                 <div className="md:flex justify-center items-center">
                     <button
                         onClick={() => setOpen((prev) => !prev)}
