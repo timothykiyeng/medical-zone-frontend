@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Signup.css";
 import signupImage from "../assets/signup.jpg";
 
-const api = "https://medical-zone.onrender.com/"
+const api = "https://medizone.onrender.com"
 
 const Signup = ({ setUser }) => {
   const navigate = useNavigate();

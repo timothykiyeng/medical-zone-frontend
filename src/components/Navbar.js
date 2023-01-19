@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 
-const api = "https://medicalzone-xra7.onrender.com"
+const api = "https://medizone.onrender.com"
 
 const Navbar = ({user, setUser}) => {
     function handleLogout(){
