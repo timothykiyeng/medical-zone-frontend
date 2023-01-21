@@ -16,6 +16,7 @@ import UseFetch from './components/useFetch';
 
 function App() {
   const [user, setUser] = useState(null)
+  
   const {data:appointments} = UseFetch("http://localhost:3000/appointments")
   // const {data:patients} = UseFetch("http://localhost:3000/patients")
     
@@ -34,7 +35,6 @@ function App() {
           <Route path='/patient' element={<Patient user={user} /> } />
           <Route path = '/dashboard' element={<Dashboard user={user} />}/>
           <Route path='/doctor' element={<Doctor appointments={appointments} />} />
-          <Route path='/patient' element={<Patient /> } />
         </Routes>
         <Footer />
       </Router>

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Login.css";
 import loginImage from "../assets/login.jpg";
 
-const api = "https://medizone.onrender.com"
+const api = "http://localhost:3000"
 
 const Login = ({ setUser }) => {
   const navigate = useNavigate();
@@ -214,7 +214,7 @@ const Login = ({ setUser }) => {
                     <label className="input-label">Birthdate:</label>
                     <input
                       className="input"
-                      type="text"
+                      type="date"
                       placeholder="mm/dd/yyyy"
                       name="birthdate"
                       id="birthdate"

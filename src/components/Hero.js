@@ -17,7 +17,7 @@ const Hero = () => {
                         <span className="text-pink-500 mx-2">Home</span>
                     </h2>
                     <h1 className='mb-4 md:text-5xl text-3xl font-bold uppercase text-sky-600 md:mt-8 mt-4 text-center'>WELCOME TO OUR HOSPITAL WHERE HEALING BEGINS</h1>
-                    <p className='text-center md:text-lg text-sm'>At our hospital, we believe in providing the highest quality of care to our patients, which is why we have invested in the latest technology, and have a team of highly skilled and compassionate healthcare professionals, ready to help you and your loved ones on your journey to wellness.</p>
+                    <p className='text-center md:text-2xl text-lg font-medium text-green-600'>At our hospital, we believe in providing the highest quality of care to our patients, which is why we have invested in the latest technology, and have a team of highly skilled and compassionate healthcare professionals, ready to help you and your loved ones on your journey to wellness.</p>
                     <div className='md:flex justify-center items-center md:pt-16 pt-8'>
                         <Link to='/signup' className='btn bg-white text-black uppercase font-medium md:mr-8 mr-2'>
                             Get Started

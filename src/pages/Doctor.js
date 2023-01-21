@@ -3,7 +3,6 @@ import BookAppointment from "../components/doctors/BookAppointments"
 import PatientList from "../components/doctors/PatientList"
 
 const Doctor = ({appointments}) => {
-    // const { id } = useRef()
     const [show, setShow] = useState(true)
     const [open,  setOpen] = useState(false)
 
@@ -19,6 +18,7 @@ const Doctor = ({appointments}) => {
                         Patient List
                     </button>
                     <button 
+                        to='/'
                         className='btn'
                         onClick={() => setShow((prev) => !prev)}
                         >

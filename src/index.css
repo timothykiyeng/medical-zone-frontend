@@ -31,6 +31,6 @@ body {
   }
 
   .datepicker, .title {
-    @apply my-2 rounded-md border-2 w-full pl-2 pr-4 py-2 md:mx-2 outline-none focus-within:border-sky-500 
+    @apply my-2 rounded-md border-2 w-full pl-2 pr-4 py-2 outline-none focus-within:border-sky-500 
   }
 }

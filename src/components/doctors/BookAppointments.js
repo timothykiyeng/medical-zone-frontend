@@ -1,157 +1,58 @@
-import format from "date-fns/format";
-import getDay from "date-fns/getDay";
-import parse from "date-fns/parse";
-import startOfWeek from "date-fns/startOfWeek";
-import { useState, useCallback } from "react";
-import { Calendar, dateFnsLocalizer } from "react-big-calendar";
-import "react-big-calendar/lib/css/react-big-calendar.css";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-// import data from "../../data/data.json";
+import { useEffect, useState } from "react";
+import AppointmentForm from "./AppointmentForm";
 
-const locales = {
-    "en-US": require("date-fns/locale/en-US"),
-};
+const BookAppointment = () => {
+    const [data, setData] = useState([])
 
-const localizer = dateFnsLocalizer({
-    format,
-    parse,
-    startOfWeek,
-    getDay,
-    locales,
-});
+    useEffect(() => {
+        fetch(`http://localhost:3000/appointments`)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            setData(data);
+            
+        })
+    }, [])
 
+    return ( 
+        <>
+            <h1 className='md:text-4xl text-3xl font-bold uppercase text-gray-800 md:mt-8 mt-4 text-center'>Book Appointment</h1>
+            <p className="mt-4 text-lg font-light ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sapien aliquam, convallis nibh in, gravida orci. Vestibulum congue fermentum varius.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sapien aliquam, convallis nibh in, gravida orci. Vestibulum congue fermentum varius.
+            </p>
 
-    const events = [
-        {
-            title: "Pregnancy test for Mercy",
-            description: "Mercy Dale",
-            allDay: false,
-            start: new Date(2023,0,13),
-            end: new Date(2023,0,14)
-        },
-        {
-            title: "Cadiology test for Niha Raj",
-            description: "Niha Raj",
-            allDay: false,
-            start: new Date(2023,0,15),
-            end: new Date(2023,0,17 )
-        },
-        {
-            title: "Chemotherapy test for MacDill",
-            description: "John MacDill",
-            allDay: false,
-            start: new Date(2023,0,22),
-            end: new Date(2023,0,24)
-        },
-        {
-            title: "Ear test for Jennifer",
-            description: "Jennifer Nate",
-            allDay: false,
-            start: new Date(2023,0,26), 
-            end: new Date(2023,0,26)
-        }
-    ]
+            <div className="">
+                <AppointmentForm />
+            </div>
 
-
-
-function BookAppointments({appointments}) {
-    // var events;
-    // fetch('http://localhost:3000/appointments')
-    // .then(res => res.json())
-    // .then(data => {
-    //     events = data;
-    // })
-    // .then(() => {
-    //     console.log(events);
-    // });
-    // const events = data.appointments
-    console.log(events);
-
-    // {connect this to backend}
-    const [newEvent, setNewEvent] = useState({ title: "", description: "", start: "", end: "" });
-    const [allEvents, setAllEvents] = useState(events);
-  
-
-    const handleAddEvent = (e) => {
-        e.preventDefault();
-        
-        setAllEvents([...allEvents, newEvent]);
-    }
-
-    // add new event onclick {connect this to backend}
-    const handleSelectSlot = useCallback(
-        ({ start, end }) => {
-        const title = window.prompt('New Event Name') 
-
-        if (title) {
-            setAllEvents((prev) => [...prev, { start, end, title }])
-        }
-        },
-        [setAllEvents]
-    )
-
-    // show more info onclick appointment
-    const handleSelectEvent = useCallback(
-        (event) => window.alert(`Title: ${event.title}  Desctiption: ${event.description}`),
-        []
-    )
-
-    return (
-        <div className="flex flex-col justify-center mx-2 md:mx-0 md:my-16 my-8">
-            <h1 className="header text-gray-700 text-center">Calendar</h1>
-            <h2 className="font-light text-pink-500 text-center">Add New Appointment</h2>
-            <form onSubmit={handleAddEvent} className="md:flex flex-col justify-center items-center md:mb-16 mb-8">
-                <div className="md:flex ">
-                    <input 
-                        type="text" 
-                        className="title"
-                        placeholder="Add Title" 
-                        value={newEvent.title} 
-                        onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} 
-                    />
-                    <input 
-                        type="text" 
-                        className="title"
-                        placeholder="Add Patient's Name..." 
-                        value={newEvent.description} 
-                        onChange={(e) => setNewEvent({ ...newEvent, description: e.target.value })} 
-                    />
-                    <DatePicker
-                        className="datepicker"  
-                        placeholderText="Start Date" 
-                        selected={newEvent.start} 
-                        onChange={(start) => setNewEvent({ ...newEvent, start })} 
-                    />
-                    <DatePicker
-                        className="datepicker"  
-                        placeholderText="End Date" 
-                        selected={newEvent.end} 
-                        onChange={(end) => setNewEvent({ ...newEvent, end })} 
-                    />
-                </div>
-                <div className="flex justify-center items-center">
-                    <button 
-                        className="btn md:mt-8 mt-4 uppercase font-semibold"
-                        >
-                        Add Appointment
-                    </button>
-                </div>
-            </form>
-
-            <Calendar 
-                className="z-[0]"
-                localizer={localizer} 
-                events={allEvents} 
-                startAccessor="start" 
-                endAccessor="end" 
-                style={{ height: 600}}
-                selectable
-                onSelectEvent={handleSelectEvent}
-                onSelectSlot={handleSelectSlot}
-                />
-        </div>
+            <div className="flex flex-col justify-center items-center md:mt-16 mt-8">
+                <h1 className='md:text-4xl text-3xl font-bold uppercase text-gray-800 md:mt-8 md:my-8 my-4 text-center'>Appointment Summary</h1>
+                <table>
+                    <tr className="border-2 border-sky-500  text-gray-800 md:text-xl text-lg">
+                        <th className="border-2 border-sky-500 p-3">ID</th>
+                        <th className="border-2 border-sky-500 p-3">Patient Name</th>
+                        <th className="border-2 border-sky-500 p-3">Date</th>
+                        <th className="border-2 border-sky-500 p-3">Description</th>
+                        <th className="border-2 border-sky-500 p-3">Edit</th>
+                        <th className="border-2 border-sky-500 p-3">Delete</th>
+                    </tr>
+                    <tr className="border-2 border-sky-500 p-2">
+                        <td className="border-2 border-sky-500 p-2">Alfreds Futterkiste</td>
+                        <td className="border-2 border-sky-500 p-2">Maria Anders</td>
+                        <td className="border-2 border-sky-500 p-2">Germany</td>
+                        <td className="border-2 border-sky-500 p-2">Germany</td>
+                    </tr>
+                    <tr className="border-2 border-sky-500 p-2">
+                        <td className="border-2 border-sky-500 p-2">Centro comercial Moctezuma</td>
+                        <td className="border-2 border-sky-500 p-2">Francisco Chang</td>
+                        <td className="border-2 border-sky-500 p-2">Mexico</td>
+                        <td className="border-2 border-sky-500 p-2">Germany</td>
+                    </tr>
+                </table> 
+            </div>
+        </>
     );
 }
-
-export default BookAppointments;
+ 
+export default BookAppointment;

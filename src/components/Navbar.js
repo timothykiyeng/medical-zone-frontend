@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 
-const api = "https://medizone.onrender.com"
+const api = "http://localhost:3000"
 
 const Navbar = ({user, setUser}) => {
     function handleLogout(){
@@ -21,7 +21,10 @@ const Navbar = ({user, setUser}) => {
         {path: '/contact', name: 'Contact'}
     ]
     
-    // const [doc, setDoc] = useState(false)
+   console.log(user)
+
+    
+
 
     return ( 
         <>
@@ -47,13 +50,21 @@ const Navbar = ({user, setUser}) => {
                                 </li>
                             ))}
                             
-                            <Link 
-                                className="mx-2" 
-                                to='/dashboard'
-                                // to={user(doc) ? ('/doctor') : ('/patient')}
-                                >
-                                {user ? 'Dashboard' : null}
-                            </Link>
+                            {/* separation of concerns for doc & patient */}
+                            <li>
+                                {user ? 
+                                    <Link to='/doctor'>
+                                        Doctor
+                                    </Link>
+                                : user ?
+                                    <Link to='/patient'>
+                                        Patient
+                                    </Link>
+                                : null
+                                }
+                            </li>
+
+
                             {user ?
                                 <Link 
                                     to='/' 
@@ -77,8 +88,7 @@ const Navbar = ({user, setUser}) => {
                                     </Link>
                                 </>
                             }
-                                
-                            
+                                    
                         </ul>
                     </div>
                 </div>
