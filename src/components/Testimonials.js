@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {

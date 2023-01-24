@@ -1,3 +1,5 @@
+import * as React from 'react';
+//import ReactDOM from 'react-dom'
 import AboutBanner from '../assets/about.jpg'
 import { HiOutlineMail } from 'react-icons/hi'
 import { MdLocationPin } from 'react-icons/md'

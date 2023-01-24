@@ -1,3 +1,4 @@
+import * as React from 'react';
 import data from "../data/data.json"
 import { motion } from "framer-motion";
 import { Slide } from "react-reveal";

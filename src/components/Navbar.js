@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 
-const api = "https://medizone.onrender.com"
+const api = "http://127.0.0.1:3000"
 
 const Navbar = ({user, setUser}) => {
     function handleLogout(){
@@ -18,15 +19,16 @@ const Navbar = ({user, setUser}) => {
     const navlinks = [
         {path: '/', name: 'Home'},
         {path: '/about', name: 'About'},
-        {path: '/contact', name: 'Contact'}
+        {path: '/contact', name: 'Contact'},
+        {path: '/departments', name: 'Departments'}
     ]
     
     // const [doc, setDoc] = useState(false)
 
     return ( 
         <>
-            <nav className='lg:px-64 md:px-40 px-8 md:py-6 py-4 top-0 left-0 sticky z-[100] bg-sky-400 opacity-100 shadow-xl'>
-                <div className='md:flex items-center justify-between'>
+            <nav className=' lg:px-32  px-8 md:py-6 py-4 top-0 left-0 sticky z-[100] bg-sky-400 opacity-100 shadow-xl'>
+                <div className='md:flex items-center justify-between '>
                     <div className="flex justify-between items-center">
                         <Link to='/' className='flex items-center lg:text-3xl md:2xl text-xl uppercase font-semibold text-white'>
                             <img className="md: md:w-16 w-8" src={Logo} alt="logo"/>
@@ -47,21 +49,21 @@ const Navbar = ({user, setUser}) => {
                                 </li>
                             ))}
                             
-                            <Link 
+                            <NavLink 
                                 className="mx-2" 
-                                to='/dashboard'
+                                to='/portal'
                                 // to={user(doc) ? ('/doctor') : ('/patient')}
                                 >
-                                {user ? 'Dashboard' : null}
-                            </Link>
+                                {user ? 'Portal' : null}
+                            </NavLink>
                             {user ?
-                                <Link 
+                                <NavLink 
                                     to='/' 
                                     onClick={handleLogout}
                                     className="btn"
                                     >
                                         Log Out
-                                </Link>
+                                </NavLink>
                                 :
                                 <>
                                 <Link 

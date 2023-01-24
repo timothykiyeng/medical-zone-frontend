@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Gynecology from "../assets/sterility.jpg"
 import Skin from "../assets/skin.jpg"
 import Dentist from "../assets/dentist.jpg"

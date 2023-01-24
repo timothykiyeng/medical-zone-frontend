@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import data from "../data/data.json"
 import { Slide } from "react-reveal";
 

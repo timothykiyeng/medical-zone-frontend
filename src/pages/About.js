@@ -1,3 +1,4 @@
+import * as React from 'react';
 import AboutBanner from '../assets/about.jpg'
 import Inquiry from '../components/Inquiries';
 import OurTeam from '../components/OurTeam';
