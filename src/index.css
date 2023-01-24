@@ -27,7 +27,15 @@ body {
   }
 
   .content {
-    @apply md:text-lg text-base text-gray-800 font-light my-2
+    @apply md:text-lg text-base text-gray-800 font-light my-2 
+  }
+
+  .dept-card {
+    @apply border-2 border-sky-300 rounded-xl flex flex-col justify-center items-center md:py-8 md:px-0 py-4 px-3 hover:bg-sky-300 text-gray-700 hover:text-gray-100 md:text-xl text-lg text-center font-medium
+  }
+
+  .dept-icon {
+    @apply text-pink-500 md:text-5xl text-2xl mb-2 
   }
 
   .datepicker, .title {
