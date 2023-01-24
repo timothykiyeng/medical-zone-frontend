@@ -3,7 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Login.css";
 import loginImage from "../assets/login.jpg";
 
-const api = "https://medizone.onrender.com"
+const api = "http://127.0.0.1:3000"
+
+// const api = "https://medizone.onrender.com"
 
 const Login = ({ setUser }) => {
   const navigate = useNavigate();
