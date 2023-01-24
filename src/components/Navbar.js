@@ -31,7 +31,7 @@ const Navbar = ({user, setUser}) => {
                 <div className='md:flex items-center justify-between '>
                     <div className="flex justify-between items-center">
                         <Link to='/' className='flex items-center lg:text-3xl md:2xl text-xl uppercase font-semibold text-white'>
-                            <img className="md: md:w-16 w-8" src={Logo} alt="logo"/>
+                            <img className="md: md:w-16 w-8 mr-2" src={Logo} alt="logo"/>
                             Medical Zone
                         </Link>
                         
