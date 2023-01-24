@@ -9,15 +9,15 @@ const PatientCollapsible = ({ patient, docAppointments}) => {
   }
 
   return (
-    <div className='patient'>
+    <div className='patient '>
       <div className="container ">
         <button className={expand ? 'btn-clicked': 'btn'} onClick={handleClick}>
           {patient.name} ({patient.total_appts})
-          <span className={expand ? 'hamburger cross' : 'hamburger'}>
+          {/* <span className={expand ? 'hamburger cross' : 'hamburger'}>
             <span className="line line--top"></span>
             <span className="line line--middle"></span>
             <span className="line line--bottom"></span>
-          </span>
+          </span> */}
         </button>
       </div>
       <div className='collapsible'>

@@ -14,12 +14,12 @@ const ApptCollapsible = ({ appt }) => {
       <div className="container flex flex-col items-center justify-center">
         <button className={expand ? 'btn-clicked': 'btn'} onClick={handleClick}>
         {appt.startDate.split('-')[1]}/{appt.startDate.split('-')[2].split('T')[0]}/{appt.startDate.split('-')[0]}: 
-          <br/> 
+          {/* <br/> 
           <span className={expand ? 'hamburger cross' : 'hamburger'}>
             <span className="line line--top"></span>
             <span className="line line--middle"></span>
             <span className="line line--bottom"></span>
-          </span>
+          </span> */}
         </button>
       </div>
 
