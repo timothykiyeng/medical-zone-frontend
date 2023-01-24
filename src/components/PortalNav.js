@@ -7,11 +7,11 @@ import { BiTestTube } from "react-icons/bi";
 
 const PortalNav = ({ user }) => {
   return (
-    <div className='portal-nav '>
+    <div className='portal-nav min-h-[50vh]'>
       {user.doc ? 
         <div className='nav-links md:my-8 flex justify-center items-center'>
-          <NavLink className='portal-nav' to='/portal/patients'><BsFilePerson className='portal-nav-icon text-pink-500' /> Patients</NavLink>
-          <NavLink className='portal-nav' to='/portal/calendar'><BsCalendarPlus className='portal-nav-icon text-gray-700 ' /> Calendar</NavLink>
+          <NavLink className='portal-nav patient-list' to='/portal/patients'><BsFilePerson className='portal-nav-icon text-pink-500' /> Patients</NavLink>
+          <NavLink className='portal-nav patient-list' to='/portal/calendar'><BsCalendarPlus className='portal-nav-icon text-gray-700 ' /> Calendar</NavLink>
         </div>
       :
       <div className='patient-nav min-h-[50vh]'>

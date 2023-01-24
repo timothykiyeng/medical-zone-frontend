@@ -1,8 +1,13 @@
 import * as React from 'react';
 const ContactForm = () => {
+    const handleContact = (e) => {
+        e.preventDefault();
+        
+        alert("Form submitted successfully :)")
+    }
     return ( 
         <>
-            <form>
+            <form onSubmit={handleContact}>
                 <div className='md:flex items-center justify-between md:space-x-8'>
                     <input 
                         type="text" 
