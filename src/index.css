@@ -38,6 +38,34 @@ body {
     @apply text-pink-500 md:text-5xl text-2xl mb-2 
   }
 
+  .portal-nav {
+    @apply flex flex-col
+  }
+
+  .portal-nav-icon {
+    @apply md:text-4xl text-2xl mb-4
+  }
+
+  .patient-details-doc {
+    @apply mx-1 font-light text-lg
+  }
+
+  .patient-list {
+    @apply my-2 text-gray-800 font-medium text-xl
+  }
+
+  .patient-nav {
+    @apply flex justify-center items-center md:my-16 my-8 
+  }
+
+  .patient-nav-btn {
+    @apply flex flex-col justify-center items-center text-gray-800 font-medium md:text-2xl text-xl md:mx-8 mx-4
+  }
+
+  .patient-nav-icon {
+    @apply md:text-5xl text-2xl mb-2
+  }
+
   .datepicker, .title {
     @apply my-2 rounded-md border-2 w-full pl-2 pr-4 py-2 md:mx-2 outline-none focus-within:border-sky-500 
   }

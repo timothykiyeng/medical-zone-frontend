@@ -10,10 +10,11 @@ const ApptCollapsible = ({ appt }) => {
   }
 
   return (
-    <div className='appt'>
-      <div className="container">
-        <button className={expand ? 'bttn-clicked': 'bttn'} onClick={handleClick}>
-        {appt.startDate.split('-')[1]}/{appt.startDate.split('-')[2].split('T')[0]}/{appt.startDate.split('-')[0]}: <br></br> {appt.title}
+    <div className='appt flex flex-col items-center justify-center md:my-16 my-8'>
+      <div className="container flex flex-col items-center justify-center">
+        <button className={expand ? 'btn-clicked': 'btn'} onClick={handleClick}>
+        {appt.startDate.split('-')[1]}/{appt.startDate.split('-')[2].split('T')[0]}/{appt.startDate.split('-')[0]}: 
+          <br/> 
           <span className={expand ? 'hamburger cross' : 'hamburger'}>
             <span className="line line--top"></span>
             <span className="line line--middle"></span>
@@ -21,7 +22,10 @@ const ApptCollapsible = ({ appt }) => {
           </span>
         </button>
       </div>
-      <div className='collapsible'>
+
+      <div className='pt-4 text-sky-500 font-medium text-lg '>{appt.title}</div>
+
+      <div className='collapsible mt-8 md:text-xl text-lg text-center font-light'>
         <ul key={appt.id} className={expand ? "expanded" : 'collapsed'}>
           <li>Description: {appt.description}</li>
         </ul>
