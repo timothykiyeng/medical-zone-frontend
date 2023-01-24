@@ -18,38 +18,35 @@ const Signup = ({ setUser }) => {
     age: "",
     doc: false,
   });
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSignupData((signupData) => ({ ...signupData, [name]: value }));
   };
-
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
     if (confirmPassword !== signupData.password) {
       alert("Passwords dont' match!");
     }
-    fetch(`${api}/patients`, {
+    fetch("http://127.0.0.1:3000/patients", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(signupData),
+      body: JSON.stringify({ ...signupData, gender: gender }),
     }).then((r) => {
       if (r.ok) {
         r.json()
           .then((user) => {
             setUser(user);
           })
-          .then(() => navigate("/"));
+          .then(() => navigate("/patient"));
       } else {
         r.json().then((json) => setErrors(json.errors));
       }
     });
   };
-
   return (
     <div className="signup flex flex-col items-center justify-center md:min-h-[80vh] min-h-[82vh]">
       <h1 className="header text-gray-700 text-center md:my-8 my-4">Get Started</h1>
@@ -135,5 +132,17 @@ const Signup = ({ setUser }) => {
     </div>
   );
 };
-
 export default Signup;
+
+
+
+
+
+
+
+
+
+
+
+
+
