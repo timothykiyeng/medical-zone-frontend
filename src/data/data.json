@@ -57,25 +57,25 @@
             "id": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXv-N1ZV6Osz2mr_4RTUAcfroUQTTmFl4Pnw&usqp=CAU",
             "name": "Diana Jonnes",
-            "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
+            "remarks": "“In our job, you will never go home at the end of the day thinking that you haven’t done something valuable and important.”"
         },
         {
             "id": 2,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQomkIN3Vcm-HiL0XWhk45GZe51TRfJ15aX5A&usqp=CAU",
             "name": "Ali Mukhtar",
-            "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
+            "remarks": "“As a caregiver, you see selfless acts everyday.”"
         },
         {
             "id": 3,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuF9D4TMbmAYZylIJ1hKY9YjL6tqX30buH1w&usqp=CAU",
             "name": "Andrew Ochieng",
-            "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
+            "remarks": "“In nothing do men more nearly approach the gods than in giving health to men.“"
         },
         {
             "id": 3,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxUJ_kOh-4mPOy2oYS6a7fe6gNfuF17uM61Q&usqp=CAU",
             "name": "Timothy Kiyeng",
-            "remarks": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, amet, consectetur  elit"
+            "remarks": "“To solve a difficult problem in medicine, don't study it directly, but rather pursue a curiosity about nature and the rest will follow. Do basic research.“"
         }
     ]
 }
