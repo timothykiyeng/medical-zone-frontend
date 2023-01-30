@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchPatients = createAsyncThunk("patients/fetchPatients", () => {
-  return fetch("/patients")
+  return fetch("https://medical-zone-backend-production.up.railway.app/patients")
     .then((response) => response.json())
     .then((data) => data);
 });

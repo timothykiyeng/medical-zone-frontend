@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Signup.css";
 import signupImage from "../assets/signup.jpg";
 
-const api = "https://medizone.onrender.com"
 
 const Signup = ({ setUser }) => {
   const navigate = useNavigate();
@@ -28,7 +27,7 @@ const Signup = ({ setUser }) => {
     if (confirmPassword !== signupData.password) {
       alert("Passwords dont' match!");
     }
-    fetch("http://127.0.0.1:3000/patients", {
+    fetch("https://medical-zone-backend-production.up.railway.app/patients", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

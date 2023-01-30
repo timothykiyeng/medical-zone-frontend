@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Login.css";
 import loginImage from "../assets/login.jpg";
 
-const api = "http://127.0.0.1:3000"
+const api = "https://medical-zone-backend-production.up.railway.app"
 
 // const api = "https://medizone.onrender.com"
 

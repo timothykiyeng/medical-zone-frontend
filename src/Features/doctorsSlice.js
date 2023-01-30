@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchDoctors = createAsyncThunk("doctors/fetchDoctors", () => {
-  return fetch("http://127.0.0.1:3000/doctors")
+  return fetch("https://medical-zone-backend-production.up.railway.app/doctors")
     .then((response) => response.json())
     .then((data) => data);
 });
 export const fetchDoctor = createAsyncThunk("doctor/fetchDoctor", (id) => {
-  return fetch(`http://127.0.0.1:3000/doctors/${id}`)
+  return fetch(`https://medical-zone-backend-production.up.railway.app/doctors/${id}`)
     .then((response) => response.json())
     .then((data) => data);
 });
