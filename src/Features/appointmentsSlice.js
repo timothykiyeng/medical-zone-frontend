@@ -1,14 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+const api = "https://medical-zone-backend-production.up.railway.app"
+
 export const fetchAppointments = createAsyncThunk("appointments/fetchAppointments", () => {
-  return fetch("https://medical-zone-backend-production.up.railway.app/appointments")
+  return fetch(`${api}/appointments`)
     .then((response) => response.json())
     .then((data) => data);
 });
 export const updateBEAppointment = createAsyncThunk(
   "newAppointments/updateAppointments",
   async (appt) => {
-    return fetch(`https://medical-zone-backend-production.up.railway.app/${appt.id}`, {
+    return fetch(`${api}/${appt.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +24,7 @@ export const updateBEAppointment = createAsyncThunk(
 export const deleteBEAppointment = createAsyncThunk(
   "appointment/deleteAppointment",
   async (apptId) => {
-    fetch(`/appointments/${apptId}`, {
+    fetch(`${api}/appointments/${apptId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +35,7 @@ export const deleteBEAppointment = createAsyncThunk(
 export const createAppointment = createAsyncThunk(
   "appointments/createAppointment",
   async (newAppt) => {
-    return fetch(`/appointments`, {
+    return fetch(`${api}/appointments`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
