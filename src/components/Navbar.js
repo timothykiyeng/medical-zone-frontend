@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 
-const api = "http://127.0.0.1:3000"
+const api = "https://medical-zone-backend-production.up.railway.app"
 
 const Navbar = ({user, setUser}) => {
     function handleLogout(){
