@@ -101,7 +101,7 @@ function App() {
           {/* <Route path='/doctor' element={<Doctor appointments={appointments} />} />
           <Route path='/patient' element={<Patient /> } /> */}
         </Routes>
-        <Footer />
+        <Footer className="footer"/>
       
     </div>
   );
