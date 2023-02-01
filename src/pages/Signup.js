@@ -40,7 +40,7 @@ const Signup = ({ setUser }) => {
           .then((user) => {
             setUser(user);
           })
-          .then(() => navigate("/patient"));
+          .then(() => navigate("/"));
       } else {
         r.json().then((json) => setErrors(json.errors));
       }
