@@ -40,7 +40,7 @@ const Signup = ({ setUser }) => {
           .then((user) => {
             setUser(user);
           })
-          .then(() => navigate("/"));
+          .then(() => navigate("/portal/calendar"));
       } else {
         r.json().then((json) => setErrors(json.errors));
       }
